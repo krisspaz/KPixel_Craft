@@ -18,7 +18,7 @@ const projects = [
     tech: ["Python", "Selenium", "BS4"],
     featured: false,
     image: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?q=80&w=2128&auto=format&fit=crop",
-    demoUrl: "#", 
+    demoUrl: "#",
     repoUrl: "https://github.com/krisspaz/scraping",
   },
   {
@@ -47,7 +47,7 @@ const Portfolio = () => {
   return (
     <section id="portafolio" className="py-32 relative bg-background">
       <div className="container mx-auto px-6 lg:px-8">
-        
+
         {/* Header de la sección */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div className="max-w-xl">
@@ -62,9 +62,9 @@ const Portfolio = () => {
               Una selección de mis trabajos más recientes, enfocados en automatización, análisis de datos y desarrollo web.
             </p>
           </div>
-          
-          <a 
-            href="https://github.com/krisspaz" 
+
+          <a
+            href="https://github.com/krisspaz"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card hover:bg-accent hover:text-accent-foreground transition-all duration-300 animate-fade-up delay-200"
@@ -79,17 +79,17 @@ const Portfolio = () => {
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className={`group relative overflow-hidden rounded-3xl border border-border bg-card transition-all duration-500 hover:shadow-2xl hover:shadow-accent/5 animate-fade-up ${
-                project.featured ? 'md:col-span-2' : 'md:col-span-1'
-              }`}
+              className={`group relative overflow-hidden rounded-3xl border border-border bg-card transition-all duration-500 hover:shadow-2xl hover:shadow-accent/5 animate-fade-up ${project.featured ? 'md:col-span-2' : 'md:col-span-1'
+                }`}
               style={{ animationDelay: `${0.2 + index * 0.1}s` }}
             >
-              
+
               {/* Imagen de Fondo con Zoom Effect */}
               <div className="absolute inset-0 h-full w-full">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
+                <img
+                  src={project.image}
+                  alt={`Captura de pantalla del proyecto ${project.title} - ${project.description}`}
+                  loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 {/* Overlay gradiente para legibilidad */}
@@ -98,7 +98,7 @@ const Portfolio = () => {
 
               {/* Contenido de la Tarjeta */}
               <div className="absolute inset-0 flex flex-col justify-between p-8">
-                
+
                 {/* Top: Badges y Links (aparecen en hover) */}
                 <div className="flex justify-between items-start">
                   <span className="inline-flex items-center rounded-full bg-accent/90 px-3 py-1 text-xs font-medium text-accent-foreground backdrop-blur-sm shadow-sm">
@@ -123,11 +123,11 @@ const Portfolio = () => {
                     {project.title}
                     <ArrowUpRight className="w-5 h-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-accent" />
                   </h3>
-                  
+
                   <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
                     {project.description}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((t) => (
                       <span
