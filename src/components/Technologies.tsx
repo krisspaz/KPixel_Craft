@@ -1,17 +1,15 @@
 import { FaReact, FaLaravel, FaDocker, FaAws } from "react-icons/fa";
 import { SiTypescript, SiFastapi, SiPostgresql } from "react-icons/si";
 
-const accent = "#7c3aed"; // Morado fuerte
-
 const technologies = [
-  { name: "React", category: "Frontend", icon: <FaReact className="w-6 h-6" style={{ color: accent }} /> },
-  { name: "TypeScript", category: "Language", icon: <SiTypescript className="w-6 h-6" style={{ color: accent }} /> },
-  { name: "Laravel", category: "Backend", icon: <FaLaravel className="w-6 h-6" style={{ color: accent }} /> },
-  { name: "FastAPI", category: "Backend", icon: <SiFastapi className="w-6 h-6" style={{ color: accent }} /> },
-  { name: "PostgreSQL", category: "Database", icon: <SiPostgresql className="w-6 h-6" style={{ color: accent }} /> },
-  { name: "Docker", category: "DevOps", icon: <FaDocker className="w-6 h-6" style={{ color: accent }} /> },
-  { name: "AWS", category: "Cloud", icon: <FaAws className="w-6 h-6" style={{ color: accent }} /> },
-  { name: "React Native", category: "Mobile", icon: <FaReact className="w-6 h-6" style={{ color: accent }} /> },
+  { name: "React", category: "Frontend", icon: <FaReact className="w-6 h-6 text-accent" /> },
+  { name: "TypeScript", category: "Language", icon: <SiTypescript className="w-6 h-6 text-accent" /> },
+  { name: "Laravel", category: "Backend", icon: <FaLaravel className="w-6 h-6 text-accent" /> },
+  { name: "FastAPI", category: "Backend", icon: <SiFastapi className="w-6 h-6 text-accent" /> },
+  { name: "PostgreSQL", category: "Database", icon: <SiPostgresql className="w-6 h-6 text-accent" /> },
+  { name: "Docker", category: "DevOps", icon: <FaDocker className="w-6 h-6 text-accent" /> },
+  { name: "AWS", category: "Cloud", icon: <FaAws className="w-6 h-6 text-accent" /> },
+  { name: "React Native", category: "Mobile", icon: <FaReact className="w-6 h-6 text-accent" /> },
 ];
 
 const Technologies = () => {
@@ -21,12 +19,11 @@ const Technologies = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-20">
           <span
-            className="font-medium text-sm tracking-wider uppercase mb-4 block animate-fade-up"
-            style={{ color: accent }}
+            className="font-medium text-sm tracking-wider uppercase mb-4 block animate-fade-up text-accent"
           >
             Stack tecnológico
           </span>
@@ -41,20 +38,18 @@ const Technologies = () => {
           {technologies.map((tech, index) => (
             <div
               key={tech.name}
-              className="group flex items-center gap-3 px-6 py-4 rounded-2xl transition-all duration-300 animate-fade-up border bg-card"
+              className="group flex items-center gap-3 px-6 py-4 rounded-2xl transition-all duration-300 animate-fade-up border bg-card border-accent/30 hover:border-accent/50 bg-accent/5"
               style={{
                 animationDelay: `${0.1 * index}s`,
-                borderColor: "rgba(124, 58, 237, 0.3)",
-                backgroundColor: "rgba(124, 58, 237, 0.05)",
               }}
             >
               <div className="flex-shrink-0">{tech.icon}</div>
 
               <div>
-                <span className="font-medium" style={{ color: "#fff" }}>
+                <span className="font-medium text-white">
                   {tech.name}
                 </span>
-                
+
                 <span className="text-xs text-muted-foreground ml-1">
                   {tech.category}
                 </span>

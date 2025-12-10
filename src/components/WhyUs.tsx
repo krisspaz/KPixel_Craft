@@ -32,28 +32,28 @@ const stats = [
 const WhyUs = () => {
   return (
     <section id="nosotros" className="py-32 relative bg-background overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#8b5cf6]/10 via-background to-background" />
+      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/10 via-background to-background" />
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
           <div className="space-y-8 animate-fade-up">
             <div>
-              <span style={{ color: "#8b5cf6" }} className="font-medium text-sm tracking-wider uppercase mb-4 block">
+              <span className="text-accent font-medium text-sm tracking-wider uppercase mb-4 block">
                 Sobre Nosotros
               </span>
               <h2 className="text-4xl sm:text-5xl font-bold text-foreground leading-tight mb-6">
                 Más que código, creamos{" "}
-                <span style={{ color: "#8b5cf6" }}>soluciones reales</span>.
+                <span className="text-accent">soluciones reales</span>.
               </h2>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                En KPixel Craft, combinamos la creatividad del diseño con la precisión de la ingeniería. 
+                En KPixel Craft, combinamos la creatividad del diseño con la precisión de la ingeniería.
                 Entendemos que detrás de cada proyecto hay un sueño o un objetivo de negocio.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-                Nos diferenciamos por nuestra transparencia, nuestra obsesión por el detalle y por entregar software 
+                Nos diferenciamos por nuestra transparencia, nuestra obsesión por el detalle y por entregar software
                 que no solo funciona, sino que enamora a los usuarios.
               </p>
             </div>
@@ -70,7 +70,7 @@ const WhyUs = () => {
             <div className="space-y-3 pt-4">
               {["Metodologías Ágiles", "Código Limpio", "Diseño UX/UI Intuitivo"].map((item) => (
                 <div key={item} className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5" style={{ color: "#8b5cf6" }} />
+                  <CheckCircle2 className="w-5 h-5 text-accent" />
                   <span className="text-foreground font-medium">{item}</span>
                 </div>
               ))}
@@ -81,10 +81,10 @@ const WhyUs = () => {
             {reasons.map((reason, index) => (
               <div
                 key={reason.title}
-                className="p-6 rounded-2xl bg-card border border-border hover:border-[#8b5cf6]/40 hover:bg-secondary/30 transition-all duration-300 group"
+                className="p-6 rounded-2xl bg-card border border-border hover:border-accent/40 hover:bg-secondary/30 transition-all duration-300 group"
               >
-                <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#8b5cf6] group-hover:text-white transition-colors">
-                  <reason.icon className="w-6 h-6" style={{ color: "#8b5cf6" }} />
+                <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center mb-4 group-hover:bg-accent group-hover:text-white transition-colors">
+                  <reason.icon className="w-6 h-6 text-accent group-hover:text-white" />
                 </div>
 
                 <h3 className="text-lg font-bold text-foreground mb-2">{reason.title}</h3>

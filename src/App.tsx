@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "@/components/ScrollToTop";
 
 // Importamos tus páginas existentes
 import Index from "./pages/Index";
@@ -10,7 +11,7 @@ import NotFound from "./pages/NotFound";
 
 // Importamos las nuevas páginas legales
 // ⚠️ IMPORTANTE: Asegúrate de que coincida con el nombre del archivo (Mayúsculas)
-import Privacy from "./pages/Privacy"; 
+import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 
 const queryClient = new QueryClient();
@@ -21,10 +22,11 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           {/* Ruta Principal (Landing Page) */}
           <Route path="/" element={<Index />} />
-          
+
           {/* Rutas Legales */}
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />

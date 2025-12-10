@@ -59,8 +59,8 @@ const Portfolio = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div className="max-w-xl">
-            <span className="text-[#a855f7] font-medium text-sm tracking-wider uppercase mb-4 block animate-fade-up">
-              <FolderGit2 className="w-4 h-4 inline-block mr-2 text-[#a855f7]" />
+            <span className="text-accent font-medium text-sm tracking-wider uppercase mb-4 block animate-fade-up">
+              <FolderGit2 className="w-4 h-4 inline-block mr-2 text-accent" />
               Portafolio
             </span>
             <h2 className="text-4xl sm:text-5xl font-bold text-foreground leading-tight animate-fade-up delay-100">
@@ -76,7 +76,7 @@ const Portfolio = () => {
             href="https://github.com/krisspaz"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card hover:bg-[#a855f7] hover:text-white transition-all duration-300 animate-fade-up delay-200"
+            className="group inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card hover:bg-accent hover:text-white transition-all duration-300 animate-fade-up delay-200"
           >
             Ver perfil de GitHub
             <Github className="w-4 h-4 group-hover:text-white transition-colors" />
@@ -87,9 +87,8 @@ const Portfolio = () => {
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className={`group relative overflow-hidden rounded-3xl border border-border bg-card transition-all duration-500 hover:shadow-2xl hover:shadow-[#a855f7]/10 animate-fade-up ${
-                project.featured ? "md:col-span-2" : "md:col-span-1"
-              }`}
+              className={`group relative overflow-hidden rounded-3xl border border-border bg-card transition-all duration-500 hover:shadow-2xl hover:shadow-accent/10 animate-fade-up ${project.featured ? "md:col-span-2" : "md:col-span-1"
+                }`}
               style={{ animationDelay: `${0.2 + index * 0.1}s` }}
             >
               <div className="absolute inset-0 h-full w-full">
@@ -104,7 +103,7 @@ const Portfolio = () => {
 
               <div className="absolute inset-0 flex flex-col justify-between p-8">
                 <div className="flex justify-between items-start">
-                  <span className="inline-flex items-center rounded-full bg-[#a855f7]/90 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm shadow-sm">
+                  <span className="inline-flex items-center rounded-full bg-accent/90 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm shadow-sm">
                     {project.category}
                   </span>
 
@@ -122,7 +121,7 @@ const Portfolio = () => {
                         href={project.demoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 bg-background/50 hover:bg-[#a855f7] hover:text-white rounded-full backdrop-blur-md transition-all"
+                        className="p-2 bg-background/50 hover:bg-accent hover:text-white rounded-full backdrop-blur-md transition-all"
                       >
                         <ExternalLink className="w-5 h-5" />
                       </a>
@@ -133,7 +132,7 @@ const Portfolio = () => {
                 <div className="translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                   <h3 className="text-2xl font-bold text-foreground mb-2 flex items-center gap-2">
                     {project.title}
-                    <ArrowUpRight className="w-5 h-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-[#a855f7]" />
+                    <ArrowUpRight className="w-5 h-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-accent" />
                   </h3>
 
                   <p className="text-muted-foreground text-sm mb-4 line-clamp-2">

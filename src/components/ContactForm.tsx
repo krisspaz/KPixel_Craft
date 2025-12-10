@@ -51,17 +51,17 @@ export const ContactForm = () => {
     };
 
     return (
-        <div className="rounded-3xl border border-[#9b5cff]/40 bg-card p-8 shadow-lg shadow-[#9b5cff]/10 relative overflow-hidden">
+        <div className="rounded-3xl border border-accent/40 bg-card p-8 shadow-lg shadow-accent/10 relative overflow-hidden">
             {isSent && (
                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-card z-20 animate-fade-in text-center p-8">
-                    <div className="w-16 h-16 bg-[#9b5cff]/15 rounded-full flex items-center justify-center mb-4">
-                        <Send className="w-8 h-8 text-[#9b5cff]" />
+                    <div className="w-16 h-16 bg-accent/15 rounded-full flex items-center justify-center mb-4">
+                        <Send className="w-8 h-8 text-accent" />
                     </div>
                     <h3 className="text-2xl font-bold text-foreground mb-2">¡Redirigiendo a WhatsApp!</h3>
                     <p className="text-muted-foreground">Gracias por contactarnos.</p>
                     <button
                         onClick={() => setIsSent(false)}
-                        className="mt-6 text-sm text-[#9b5cff] hover:underline"
+                        className="mt-6 text-sm text-accent hover:underline"
                     >
                         Enviar otro mensaje
                     </button>
@@ -71,16 +71,17 @@ export const ContactForm = () => {
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 relative z-10">
                 <div className="grid sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                        <label className="text-sm font-medium text-foreground">
+                        <label htmlFor="name-input" className="text-sm font-medium text-foreground">
                             Nombre completo
                         </label>
                         <input
+                            id="name-input"
                             type="text"
                             {...register("name")}
                             className={`w-full px-4 py-3 bg-secondary/50 border rounded-xl text-foreground 
                                 placeholder:text-muted-foreground transition-all 
                                 ${errors.name ? "border-red-500" : "border-border"} 
-                                focus:ring-2 focus:ring-[#9b5cff]/50 focus:border-[#9b5cff]
+                                focus:ring-2 focus:ring-accent/50 focus:border-accent
                             `}
                             placeholder="John Doe"
                         />
@@ -88,13 +89,14 @@ export const ContactForm = () => {
                     </div>
 
                     <div className="space-y-2">
-                        <label className="text-sm font-medium text-foreground">Email</label>
+                        <label htmlFor="email-input" className="text-sm font-medium text-foreground">Email</label>
                         <input
+                            id="email-input"
                             type="email"
                             {...register("email")}
                             className={`w-full px-4 py-3 bg-secondary/50 border rounded-xl text-foreground 
                                 ${errors.email ? "border-red-500" : "border-border"} 
-                                focus:ring-2 focus:ring-[#9b5cff]/50 focus:border-[#9b5cff]
+                                focus:ring-2 focus:ring-accent/50 focus:border-accent
                             `}
                             placeholder="john@empresa.com"
                         />
@@ -103,10 +105,11 @@ export const ContactForm = () => {
                 </div>
 
                 <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground">Asunto</label>
+                    <label htmlFor="subject-select" className="text-sm font-medium text-foreground">Asunto</label>
                     <select
+                        id="subject-select"
                         {...register("subject")}
-                        className="w-full px-4 py-3 bg-secondary/50 border border-border rounded-xl text-foreground focus:ring-2 focus:ring-[#9b5cff]/50 focus:border-[#9b5cff]"
+                        className="w-full px-4 py-3 bg-secondary/50 border border-border rounded-xl text-foreground focus:ring-2 focus:ring-accent/50 focus:border-accent"
                     >
                         <option value="Desarrollo Web">Desarrollo Web / App</option>
                         <option value="Consultoría">Consultoría</option>
@@ -116,14 +119,15 @@ export const ContactForm = () => {
                 </div>
 
                 <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground">Mensaje</label>
+                    <label htmlFor="message-textarea" className="text-sm font-medium text-foreground">Mensaje</label>
                     <textarea
+                        id="message-textarea"
                         {...register("message")}
                         rows={5}
                         className={`w-full px-4 py-3 bg-secondary/50 border rounded-xl text-foreground 
                             placeholder:text-muted-foreground resize-none 
                             ${errors.message ? "border-red-500" : "border-border"} 
-                            focus:ring-2 focus:ring-[#9b5cff]/50 focus:border-[#9b5cff]
+                            focus:ring-2 focus:ring-accent/50 focus:border-accent
                         `}
                         placeholder="Cuéntanos los detalles de tu proyecto..."
                     />
@@ -133,7 +137,7 @@ export const ContactForm = () => {
                 <Button
                     type="submit"
                     size="lg"
-                    className="w-full h-12 rounded-xl font-medium bg-[#9b5cff] hover:bg-[#844dff] text-white transition-all shadow-lg shadow-[#9b5cff]/30"
+                    className="w-full h-12 rounded-xl font-medium bg-accent hover:opacity-90 text-white transition-all shadow-lg shadow-accent/30"
                     disabled={isSubmitting}
                 >
                     {isSubmitting ? (
