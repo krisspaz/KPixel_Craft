@@ -30,7 +30,6 @@ export const ContactForm = () => {
     const onSubmit = (data: FormData) => {
         setIsSubmitting(true);
 
-        // Preparamos el mensaje para WhatsApp
         const message = `👋 Hola Kris (KPixel Craft), vengo de tu sitio web.
 
 👤 *Nombre:* ${data.name}
@@ -52,22 +51,22 @@ export const ContactForm = () => {
     };
 
     return (
-        <div className="rounded-3xl border border-border bg-card p-8 shadow-lg shadow-black/5 relative overflow-hidden">
-            {isSent ? (
+        <div className="rounded-3xl border border-[#9b5cff]/40 bg-card p-8 shadow-lg shadow-[#9b5cff]/10 relative overflow-hidden">
+            {isSent && (
                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-card z-20 animate-fade-in text-center p-8">
-                    <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mb-4">
-                        <Send className="w-8 h-8 text-green-500" />
+                    <div className="w-16 h-16 bg-[#9b5cff]/15 rounded-full flex items-center justify-center mb-4">
+                        <Send className="w-8 h-8 text-[#9b5cff]" />
                     </div>
                     <h3 className="text-2xl font-bold text-foreground mb-2">¡Redirigiendo a WhatsApp!</h3>
-                    <p className="text-muted-foreground">Gracias por contactarnos. Continúa el chat para finalizar.</p>
+                    <p className="text-muted-foreground">Gracias por contactarnos.</p>
                     <button
                         onClick={() => setIsSent(false)}
-                        className="mt-6 text-sm text-accent hover:underline"
+                        className="mt-6 text-sm text-[#9b5cff] hover:underline"
                     >
                         Enviar otro mensaje
                     </button>
                 </div>
-            ) : null}
+            )}
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 relative z-10">
                 <div className="grid sm:grid-cols-2 gap-6">
@@ -78,26 +77,28 @@ export const ContactForm = () => {
                         <input
                             type="text"
                             {...register("name")}
-                            className={`w-full px-4 py-3 bg-secondary/50 border rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all ${errors.name ? "border-red-500" : "border-border"
-                                }`}
+                            className={`w-full px-4 py-3 bg-secondary/50 border rounded-xl text-foreground 
+                                placeholder:text-muted-foreground transition-all 
+                                ${errors.name ? "border-red-500" : "border-border"} 
+                                focus:ring-2 focus:ring-[#9b5cff]/50 focus:border-[#9b5cff]
+                            `}
                             placeholder="John Doe"
                         />
-                        {errors.name && (
-                            <p className="text-xs text-red-500 mt-1">{errors.name.message}</p>
-                        )}
+                        {errors.name && <p className="text-xs text-red-500">{errors.name.message}</p>}
                     </div>
+
                     <div className="space-y-2">
                         <label className="text-sm font-medium text-foreground">Email</label>
                         <input
                             type="email"
                             {...register("email")}
-                            className={`w-full px-4 py-3 bg-secondary/50 border rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all ${errors.email ? "border-red-500" : "border-border"
-                                }`}
+                            className={`w-full px-4 py-3 bg-secondary/50 border rounded-xl text-foreground 
+                                ${errors.email ? "border-red-500" : "border-border"} 
+                                focus:ring-2 focus:ring-[#9b5cff]/50 focus:border-[#9b5cff]
+                            `}
                             placeholder="john@empresa.com"
                         />
-                        {errors.email && (
-                            <p className="text-xs text-red-500 mt-1">{errors.email.message}</p>
-                        )}
+                        {errors.email && <p className="text-xs text-red-500">{errors.email.message}</p>}
                     </div>
                 </div>
 
@@ -105,7 +106,7 @@ export const ContactForm = () => {
                     <label className="text-sm font-medium text-foreground">Asunto</label>
                     <select
                         {...register("subject")}
-                        className="w-full px-4 py-3 bg-secondary/50 border border-border rounded-xl text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all"
+                        className="w-full px-4 py-3 bg-secondary/50 border border-border rounded-xl text-foreground focus:ring-2 focus:ring-[#9b5cff]/50 focus:border-[#9b5cff]"
                     >
                         <option value="Desarrollo Web">Desarrollo Web / App</option>
                         <option value="Consultoría">Consultoría</option>
@@ -119,26 +120,26 @@ export const ContactForm = () => {
                     <textarea
                         {...register("message")}
                         rows={5}
-                        className={`w-full px-4 py-3 bg-secondary/50 border rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all resize-none ${errors.message ? "border-red-500" : "border-border"
-                            }`}
+                        className={`w-full px-4 py-3 bg-secondary/50 border rounded-xl text-foreground 
+                            placeholder:text-muted-foreground resize-none 
+                            ${errors.message ? "border-red-500" : "border-border"} 
+                            focus:ring-2 focus:ring-[#9b5cff]/50 focus:border-[#9b5cff]
+                        `}
                         placeholder="Cuéntanos los detalles de tu proyecto..."
                     />
-                    {errors.message && (
-                        <p className="text-xs text-red-500 mt-1">{errors.message.message}</p>
-                    )}
+                    {errors.message && <p className="text-xs text-red-500">{errors.message.message}</p>}
                 </div>
 
                 <Button
                     type="submit"
-                    variant="default"
                     size="lg"
-                    className="w-full bg-accent hover:bg-accent/90 text-white font-medium h-12 rounded-xl"
+                    className="w-full h-12 rounded-xl font-medium bg-[#9b5cff] hover:bg-[#844dff] text-white transition-all shadow-lg shadow-[#9b5cff]/30"
                     disabled={isSubmitting}
                 >
                     {isSubmitting ? (
                         <>
                             <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                            Conectando con WhatsApp...
+                            Conectando...
                         </>
                     ) : (
                         <>

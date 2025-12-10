@@ -1,5 +1,5 @@
 import { Github, Linkedin, Instagram, ArrowUp } from "lucide-react";
-import { Link } from "react-router-dom"; // <--- Importante para la navegación interna
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,7 +11,6 @@ const Footer = () => {
   ];
 
   const mainLinks = [
-    // Agregamos "/" al inicio para que funcionen si estás en la página de privacidad
     { href: "/#servicios", label: "Servicios" },
     { href: "/#tecnologias", label: "Stack Tecnológico" },
     { href: "/#portafolio", label: "Proyectos" },
@@ -19,7 +18,6 @@ const Footer = () => {
   ];
 
   const legalLinks = [
-    // Rutas creadas en App.tsx
     { href: "/privacy", label: "Política de Privacidad" },
     { href: "/terms", label: "Términos de Servicio" },
   ];
@@ -29,30 +27,32 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-background border-t border-border pt-20 pb-10 overflow-hidden">
+    <footer className="relative bg-background border-t border-purple-900/50 pt-20 pb-10 overflow-hidden">
       
-      {/* Fondo Decorativo */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
+      {/* Fondo decorativo morado */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#7c3aed12_1px,transparent_1px),linear-gradient(to_bottom,#7c3aed12_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-purple-600/20 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         
-        {/* Grid Principal */}
+        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
           
-          {/* Columna 1: Marca */}
+          {/* Marca */}
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-2 group cursor-default">
-              <div className="w-9 h-9 bg-accent rounded-lg flex items-center justify-center transition-transform group-hover:rotate-12">
-                <span className="text-accent-foreground font-bold text-lg leading-none mt-0.5">K</span>
+              <div className="w-9 h-9 bg-purple-600 rounded-lg flex items-center justify-center transition-transform group-hover:rotate-12">
+                <span className="text-white font-bold text-lg leading-none mt-0.5">K</span>
               </div>
               <span className="font-bold text-xl text-foreground tracking-tight">
-                KPixel<span className="text-accent">Craft</span>
+                KPixel<span className="text-purple-500">Craft</span>
               </span>
             </div>
+
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
-              Transformamos ideas complejas en software elegante, escalable y de alto rendimiento para empresas modernas.
+              Transformamos ideas complejas en software elegante, escalable y de alto rendimiento.
             </p>
+
             <div className="flex items-center gap-3 pt-2">
               {socialLinks.map((social) => (
                 <a
@@ -60,7 +60,7 @@ const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-secondary/50 border border-border rounded-full flex items-center justify-center text-muted-foreground hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all duration-300"
+                  className="w-10 h-10 bg-purple-900/20 border border-purple-800/40 rounded-full flex items-center justify-center text-muted-foreground hover:bg-purple-600 hover:text-white hover:border-purple-600 transition-all duration-300"
                   aria-label={social.label}
                 >
                   <social.icon className="w-5 h-5" />
@@ -69,7 +69,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Columna 2: Navegación Principal (Anchors) */}
+          {/* Navegación */}
           <div className="lg:col-span-2 lg:col-start-6">
             <h3 className="font-semibold text-foreground mb-4">Navegación</h3>
             <ul className="space-y-3">
@@ -77,7 +77,7 @@ const Footer = () => {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm text-muted-foreground hover:text-accent transition-colors block w-fit"
+                    className="text-sm text-muted-foreground hover:text-purple-400 transition-colors block w-fit"
                   >
                     {link.label}
                   </a>
@@ -86,16 +86,15 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Columna 3: Legal (Rutas internas) */}
+          {/* Legal */}
           <div className="lg:col-span-2">
             <h3 className="font-semibold text-foreground mb-4">Legal</h3>
             <ul className="space-y-3">
               {legalLinks.map((link) => (
                 <li key={link.label}>
-                  {/* Usamos Link para navegación interna rápida */}
                   <Link
                     to={link.href}
-                    className="text-sm text-muted-foreground hover:text-accent transition-colors block w-fit"
+                    className="text-sm text-muted-foreground hover:text-purple-400 transition-colors block w-fit"
                   >
                     {link.label}
                   </Link>
@@ -104,37 +103,37 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Columna 4: CTA */}
+          {/* CTA */}
           <div className="lg:col-span-3">
-            <div className="bg-secondary/30 rounded-2xl p-6 border border-border/50">
+            <div className="bg-purple-900/10 rounded-2xl p-6 border border-purple-800/40">
               <h3 className="font-semibold text-foreground mb-2">¿Tienes un proyecto?</h3>
               <p className="text-sm text-muted-foreground mb-4">
                 Hablemos sobre cómo podemos ayudarte a crecer.
               </p>
               <a 
                 href="/#contacto" 
-                className="inline-flex text-sm font-medium text-accent hover:text-accent/80 transition-colors"
+                className="inline-flex text-sm font-medium text-purple-400 hover:text-purple-300 transition-colors"
               >
-                Solicitar cotización &rarr;
+                Solicitar cotización →
               </a>
             </div>
           </div>
         </div>
 
-        {/* Footer Bottom */}
-        <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        {/* Bottom */}
+        <div className="border-t border-purple-900/40 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground text-center md:text-left">
             © {currentYear} KPixel Craft. Todos los derechos reservados.
           </p>
 
           <div className="flex items-center gap-6">
-            <span className="flex items-center gap-2 text-sm text-muted-foreground bg-secondary/50 px-3 py-1 rounded-full border border-border/50">
+            <span className="flex items-center gap-2 text-sm text-muted-foreground bg-purple-900/20 px-3 py-1 rounded-full border border-purple-800/30">
               <span className="text-base">🇬🇹</span> Hecho en Guatemala
             </span>
             
             <button 
               onClick={scrollToTop}
-              className="p-2 bg-secondary/50 hover:bg-accent hover:text-accent-foreground rounded-full transition-colors border border-border/50"
+              className="p-2 bg-purple-900/20 hover:bg-purple-600 hover:text-white rounded-full transition-colors border border-purple-800/30"
               aria-label="Volver arriba"
             >
               <ArrowUp className="w-4 h-4" />

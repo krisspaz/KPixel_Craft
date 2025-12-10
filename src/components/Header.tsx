@@ -1,10 +1,20 @@
+```javascript
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  const location = useLocation();
+  const currentHash = location.hash;
+
+  const isActive = (href: string) => {
+    if (href === "/") return currentHash === "";
+    return currentHash === href;
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,11 +35,11 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? "bg-background/80 backdrop-blur-md border-b border-border/50 h-16 shadow-sm"
-            : "bg-transparent h-20"
-        }`}
+        className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
+  isScrolled
+    ? "bg-background/80 backdrop-blur-md border-b border-border/50 h-16 shadow-sm"
+    : "bg-transparent h-20"
+} `}
       >
         <div className="container mx-auto px-6 lg:px-8 h-full">
           <div className="flex items-center justify-between h-full">
@@ -50,7 +60,11 @@ const Header = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-full transition-all duration-200"
+                  className={`px - 4 py - 2 text - sm font - medium rounded - full transition - all duration - 200 ${
+  isActive(link.href)
+    ? "text-foreground bg-secondary/80"
+    : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
+} `}
                 >
                   {link.label}
                 </a>
@@ -79,20 +93,24 @@ const Header = () => {
 
         {/* Mobile Navigation Menu (Absolute Overlay) */}
         <div
-          className={`absolute top-full left-0 w-full bg-background/95 backdrop-blur-xl border-b border-border shadow-2xl transition-all duration-300 ease-in-out md:hidden overflow-hidden ${
-            isMobileMenuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
-          }`}
+          className={`absolute top - full left - 0 w - full bg - background / 95 backdrop - blur - xl border - b border - border shadow - 2xl transition - all duration - 300 ease -in -out md:hidden overflow - hidden ${
+  isMobileMenuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+} `}
         >
           <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="flex items-center justify-between text-lg font-medium text-foreground p-3 hover:bg-secondary/50 rounded-xl transition-colors group"
+                className={`flex items - center justify - between text - lg font - medium p - 3 rounded - xl transition - colors group ${
+  isActive(link.href)
+    ? "text-accent bg-secondary/60"
+    : "text-foreground hover:bg-secondary/40"
+} `}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
-                <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-accent transition-colors" />
+                <ChevronRight className={`w - 4 h - 4 transition - colors ${ isActive(link.href) ? "text-accent" : "text-muted-foreground group-hover:text-accent" } `} />
               </a>
             ))}
             <div className="h-px bg-border/50 my-2" />

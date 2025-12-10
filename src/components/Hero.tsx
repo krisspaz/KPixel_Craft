@@ -1,3 +1,4 @@
+// Hero component con acentos en morado eléctrico
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -9,23 +10,23 @@ const Hero = () => {
       <div className="absolute inset-0 grid-pattern opacity-50" />
       
       {/* Gradient orbs */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-accent/20 rounded-full blur-[128px] animate-float" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-accent/10 rounded-full blur-[128px] animate-float" style={{ animationDelay: '4s' }} />
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#8b5cf6]/30 rounded-full blur-[128px] animate-float" />
+      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-[#a855f7]/20 rounded-full blur-[128px] animate-float" style={{ animationDelay: '4s' }} />
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl">
           {/* Badge */}
           <div className="animate-fade-up">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border text-sm text-muted-foreground mb-8">
-              <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+              <span className="w-2 h-2 bg-[#c084fc] rounded-full animate-pulse" />
               Desarrollo de software profesional
             </span>
           </div>
 
           {/* Main Heading */}
           <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-foreground leading-[1.1] tracking-tight mb-8 animate-fade-up delay-100">
-            Creamos software que{" "}
-            <span className="text-gradient">escala</span>
+            Creamos soluciones digitales que {" "}
+            <span className="bg-gradient-to-br from-[#c084fc] to-[#a855f7] bg-clip-text text-transparent font-extrabold">crecen contigo</span>
           </h1>
 
           {/* Subtitle */}
@@ -35,13 +36,13 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-start gap-4 animate-fade-up delay-300">
-            <Button variant="accent" size="xl">
+            <Button variant="accent" size="xl" className="bg-[#a855f7] hover:bg-[#9333ea] text-white">
               <a href="#contacto" className="flex items-center gap-2">
                 Comenzar proyecto
                 <ArrowRight className="w-4 h-4" />
               </a>
             </Button>
-            <Button variant="glass" size="xl">
+            <Button variant="glass" size="xl" className="border-[#a855f7] text-[#a855f7] hover:bg-[#a855f7] hover:text-white">
               <a href="#portafolio">Ver proyectos</a>
             </Button>
           </div>
@@ -53,7 +54,7 @@ const Hero = () => {
             {[
               { value: "20+", label: "Proyectos entregados" },
               { value: "99%", label: "Clientes satisfechos" },
-              { value: "3+", label: "Años de experiencia" },
+              { value: "3+", label: "A\u00f1os de experiencia" },
               { value: "24/7", label: "Soporte técnico" },
             ].map((stat, index) => (
               <div 
@@ -61,7 +62,7 @@ const Hero = () => {
                 className="animate-fade-up"
                 style={{ animationDelay: `${0.4 + index * 0.1}s` }}
               >
-                <div className="text-3xl sm:text-4xl font-bold text-foreground mb-2">
+                <div className="text-3xl sm:text-4xl font-bold text-[#a855f7] mb-2">
                   {stat.value}
                 </div>
                 <div className="text-sm text-muted-foreground">
