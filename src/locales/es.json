@@ -1,0 +1,83 @@
+{
+    "nav": {
+        "services": "Servicios",
+        "stack": "Stack",
+        "projects": "Proyectos",
+        "about": "Nosotros",
+        "start_project": "Iniciar Proyecto",
+        "contact": "Contactar"
+    },
+    "hero": {
+        "headline": {
+            "part1": "TRANSFORMANDO",
+            "part2": "IDEAS EN",
+            "part3": "SOFTWARE",
+            "part4": "ESCALABLE"
+        },
+        "subheadline": "KPixel Craft combina arquitectura robusta con diseño de alta fidelidad para crear experiencias digitales que impulsan tu negocio.",
+        "cta_primary": "Iniciar Proyecto",
+        "cta_secondary": "Ver Portafolio",
+        "floating": {
+            "uptime": "Disponibilidad",
+            "infra": "Salud de Infraestructura",
+            "custom": "Desarrollo a Medida"
+        }
+    },
+    "services": {
+        "subtitle": "Nuestras Especialidades",
+        "title": "Soluciones para la",
+        "title_highlight": "Próxima Generación",
+        "view_all": "Ver Todos los Servicios",
+        "items": {
+            "web": {
+                "name": "Desarrollo Web",
+                "desc": "Sitios y aplicaciones rápidas, SEO friendly y escalables."
+            },
+            "mobile": {
+                "name": "Apps Móviles",
+                "desc": "Experiencias nativas en iOS y Android con React Native."
+            },
+            "ai": {
+                "name": "Inteligencia Artificial",
+                "desc": "Integración de LLMs y automatización de procesos."
+            },
+            "backend": {
+                "name": "Backend & Cloud",
+                "desc": "Arquitecturas serverless y bases de datos robustas."
+            }
+        }
+    },
+    "featured": {
+        "subtitle": "Caso de Éxito",
+        "title": "PLATAFORMA",
+        "title2": "DE COMERCIO",
+        "title_highlight": "UNIFICADO",
+        "desc": "Desarrollamos una solución integral que centraliza inventario, ventas y logística en tiempo real para un retail líder.",
+        "points": {
+            "1": "Sincronización en tiempo real",
+            "2": "Dashboard de analítica avanzada",
+            "3": "Arquitectura Serverless Escalable"
+        },
+        "view_case": "Ver Caso",
+        "stats": {
+            "sales": "Total Ventas"
+        }
+    },
+    "footer": {
+        "subscribe_title": "Suscríbete a nuestras noticias",
+        "email_placeholder": "Correo electrónico",
+        "company": "Compañía",
+        "support": "Soporte",
+        "social": "Social",
+        "rights": "© 2025 KPixel Craft. Todos los derechos reservados.",
+        "links": {
+            "about": "Nosotros",
+            "careers": "Carreras",
+            "ventures": "Ventures",
+            "grants": "Grants",
+            "help": "Centro de Ayuda",
+            "terms": "Términos de Servicio",
+            "privacy": "Política de Privacidad"
+        }
+    }
+}

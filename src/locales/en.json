@@ -1,0 +1,83 @@
+{
+    "nav": {
+        "services": "Services",
+        "stack": "Stack",
+        "projects": "Projects",
+        "about": "About",
+        "start_project": "Start Project",
+        "contact": "Contact"
+    },
+    "hero": {
+        "headline": {
+            "part1": "TRANSFORMING",
+            "part2": "IDEAS INTO",
+            "part3": "SCALABLE",
+            "part4": "SOFTWARE"
+        },
+        "subheadline": "KPixel Craft combines robust architecture with high-fidelity design to create digital experiences that drive your business.",
+        "cta_primary": "Start Project",
+        "cta_secondary": "View Portfolio",
+        "floating": {
+            "uptime": "Uptime",
+            "infra": "Infrastructure Health",
+            "custom": "Custom Dev"
+        }
+    },
+    "services": {
+        "subtitle": "Our Specialties",
+        "title": "Solutions for the",
+        "title_highlight": "Next Generation",
+        "view_all": "View All Services",
+        "items": {
+            "web": {
+                "name": "Web Development",
+                "desc": "Fast, SEO-friendly, and scalable sites and applications."
+            },
+            "mobile": {
+                "name": "Mobile Apps",
+                "desc": "Native experiences on iOS and Android with React Native."
+            },
+            "ai": {
+                "name": "Artificial Intelligence",
+                "desc": "LLM integration and process automation."
+            },
+            "backend": {
+                "name": "Backend & Cloud",
+                "desc": "Serverless architectures and robust databases."
+            }
+        }
+    },
+    "featured": {
+        "subtitle": "Success Story",
+        "title": "UNIFIED",
+        "title2": "COMMERCE",
+        "title_highlight": "PLATFORM",
+        "desc": "We developed a comprehensive solution that centralizes inventory, sales, and logistics in real-time for a leading retailer.",
+        "points": {
+            "1": "Real-time synchronization",
+            "2": "Advanced analytics dashboard",
+            "3": "Scalable Serverless Architecture"
+        },
+        "view_case": "View Case",
+        "stats": {
+            "sales": "Total Sales"
+        }
+    },
+    "footer": {
+        "subscribe_title": "Subscribe to our notifications",
+        "email_placeholder": "Email address",
+        "company": "Company",
+        "support": "Support",
+        "social": "Social",
+        "rights": "© 2025 KPixel Craft. All rights reserved.",
+        "links": {
+            "about": "About",
+            "careers": "Careers",
+            "ventures": "Ventures",
+            "grants": "Grants",
+            "help": "Help Center",
+            "terms": "Terms of Service",
+            "privacy": "Privacy Policy"
+        }
+    }
+}

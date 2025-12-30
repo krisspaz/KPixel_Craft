@@ -1,23 +1,17 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Services from "@/components/Services";
-import Technologies from "@/components/Technologies";
-import Portfolio from "@/components/Portfolio";
-import About from "@/components/About";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { Services } from "@/components/Services";
+import { FeaturedProject } from "@/components/FeaturedProject";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <div className="min-h-screen bg-background font-sans text-foreground selection:bg-accent selection:text-white">
+      <Navbar />
       <main>
         <Hero />
         <Services />
-        <Technologies />
-        <Portfolio />
-        <About />
-        <Contact />
+        <FeaturedProject />
       </main>
       <Footer />
     </div>

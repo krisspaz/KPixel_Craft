@@ -1,148 +1,69 @@
-import { Github, Linkedin, Instagram, ArrowUp } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Twitter, Instagram, Youtube, ArrowRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
-  const socialLinks = [
-    { icon: Github, href: "https://github.com/krisspaz", label: "GitHub" },
-    { icon: Linkedin, href: "https://www.linkedin.com/in/kristopher-paz-34610715a/", label: "LinkedIn" },
-    { icon: Instagram, href: "https://instagram.com/krisspaz_", label: "Instagram" },
-  ];
-
-  const mainLinks = [
-    { href: "/#servicios", label: "Servicios" },
-    { href: "/#tecnologias", label: "Stack Tecnológico" },
-    { href: "/#portafolio", label: "Proyectos" },
-    { href: "/#nosotros", label: "Sobre Nosotros" },
-  ];
-
-  const legalLinks = [
-    { href: "/privacy", label: "Política de Privacidad" },
-    { href: "/terms", label: "Términos de Servicio" },
-  ];
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+export const Footer = () => {
+  const { t } = useTranslation();
 
   return (
-    <footer className="relative bg-background border-t border-accent/20 pt-20 pb-10 overflow-hidden">
-
-      {/* Fondo decorativo morado */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--accent)/0.15)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--accent)/0.15)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-accent/20 rounded-full blur-[120px] pointer-events-none" />
-
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
-
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
-
-          {/* Marca */}
-          <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center gap-2 group cursor-default">
-              <div className="w-9 h-9 bg-accent rounded-lg flex items-center justify-center transition-transform group-hover:rotate-12">
-                <span className="text-white font-bold text-lg leading-none mt-0.5">K</span>
-              </div>
-              <span className="font-bold text-xl text-foreground tracking-tight">
-                KPixel<span className="text-accent">Craft</span>
-              </span>
+    <footer className="bg-nft-black text-nft-white pt-24 pb-12">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12">
+        <div className="flex flex-col md:flex-row justify-between items-start mb-20 gap-12">
+          {/* Brand & Newsletter */}
+          <div className="w-full md:w-1/3">
+            <div className="w-12 h-12 bg-nft-white rounded-full flex items-center justify-center text-nft-black font-bold text-2xl mb-8">
+              K
             </div>
-
-            <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
-              Transformamos ideas complejas en software elegante, escalable y de alto rendimiento.
-            </p>
-
-            <div className="flex items-center gap-3 pt-2">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-accent/10 border border-accent/20 rounded-full flex items-center justify-center text-muted-foreground hover:bg-accent hover:text-white hover:border-accent transition-all duration-300"
-                  aria-label={social.label}
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
+            <h3 className="text-2xl font-bold mb-4">{t('footer.subscribe_title')}</h3>
+            <div className="flex gap-2">
+              <input
+                type="email"
+                placeholder={t('footer.email_placeholder')}
+                className="bg-transparent border border-gray-700 rounded-full px-6 py-3 w-full focus:border-nft-yellow focus:outline-none transition-colors"
+              />
+              <button className="bg-nft-white text-nft-black font-bold px-6 py-3 rounded-full hover:bg-nft-yellow transition-colors flex items-center justify-center">
+                <ArrowRight className="w-5 h-5" />
+              </button>
             </div>
           </div>
 
-          {/* Navegación */}
-          <div className="lg:col-span-2 lg:col-start-6">
-            <h3 className="font-semibold text-foreground mb-4">Navegación</h3>
-            <ul className="space-y-3">
-              {mainLinks.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-accent transition-colors block w-fit"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div className="lg:col-span-2">
-            <h3 className="font-semibold text-foreground mb-4">Legal</h3>
-            <ul className="space-y-3">
-              {legalLinks.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    to={link.href}
-                    className="text-sm text-muted-foreground hover:text-accent transition-colors block w-fit"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* CTA */}
-          <div className="lg:col-span-3">
-            <div className="bg-accent/5 rounded-2xl p-6 border border-accent/20">
-              <h3 className="font-semibold text-foreground mb-2">¿Tienes un proyecto?</h3>
-              <p className="text-sm text-muted-foreground mb-4">
-                Hablemos sobre cómo podemos ayudarte a crecer.
-              </p>
-              <a
-                href="/#contacto"
-                className="inline-flex text-sm font-medium text-accent hover:text-accent/80 transition-colors"
-              >
-                Solicitar cotización →
-              </a>
+          {/* Links */}
+          <div className="w-full md:w-2/3 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
+              <h4 className="font-bold mb-6 text-gray-500 uppercase text-xs tracking-wider">{t('footer.company')}</h4>
+              <ul className="space-y-4 font-semibold">
+                <li><a href="#" className="hover:text-nft-yellow transition-colors">{t('footer.links.about')}</a></li>
+                <li><a href="#" className="hover:text-nft-yellow transition-colors">{t('footer.links.careers')}</a></li>
+                <li><a href="#" className="hover:text-nft-yellow transition-colors">{t('footer.links.ventures')}</a></li>
+                <li><a href="#" className="hover:text-nft-yellow transition-colors">{t('footer.links.grants')}</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold mb-6 text-gray-500 uppercase text-xs tracking-wider">{t('footer.support')}</h4>
+              <ul className="space-y-4 font-semibold">
+                <li><a href="#" className="hover:text-nft-yellow transition-colors">{t('footer.links.help')}</a></li>
+                <li><a href="#" className="hover:text-nft-yellow transition-colors">{t('footer.links.terms')}</a></li>
+                <li><a href="#" className="hover:text-nft-yellow transition-colors">{t('footer.links.privacy')}</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold mb-6 text-gray-500 uppercase text-xs tracking-wider">{t('footer.social')}</h4>
+              <ul className="space-y-4 font-semibold">
+                <li><a href="#" className="hover:text-nft-yellow transition-colors flex items-center gap-2">Twitter <Twitter className="w-4 h-4" /></a></li>
+                <li><a href="#" className="hover:text-nft-yellow transition-colors flex items-center gap-2">Instagram <Instagram className="w-4 h-4" /></a></li>
+                <li><a href="#" className="hover:text-nft-yellow transition-colors flex items-center gap-2">YouTube <Youtube className="w-4 h-4" /></a></li>
+              </ul>
             </div>
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="border-t border-accent/20 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground text-center md:text-left">
-            © {currentYear} KPixel Craft. Todos los derechos reservados.
-          </p>
-
-          <div className="flex items-center gap-6">
-            <span className="flex items-center gap-2 text-sm text-muted-foreground bg-accent/10 px-3 py-1 rounded-full border border-accent/20">
-              <span className="text-base">🇬🇹</span> Hecho en Guatemala
-            </span>
-
-            <button
-              onClick={scrollToTop}
-              className="p-2 bg-accent/10 hover:bg-accent hover:text-white rounded-full transition-colors border border-accent/20"
-              aria-label="Volver arriba"
-            >
-              <ArrowUp className="w-4 h-4" />
-            </button>
+        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm font-medium">
+          <p>{t('footer.rights')}</p>
+          <div className="flex gap-6 mt-4 md:mt-0">
+            <a href="#" className="hover:text-nft-white transition-colors">{t('footer.links.privacy')}</a>
+            <a href="#" className="hover:text-nft-white transition-colors">{t('footer.links.terms')}</a>
           </div>
         </div>
       </div>
     </footer>
   );
 };
-
-export default Footer;

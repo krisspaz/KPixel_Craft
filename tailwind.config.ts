@@ -60,6 +60,12 @@ export default {
           white: "hsl(var(--kpixel-white))",
           cyan: "hsl(var(--kpixel-cyan))",
         },
+        nft: {
+          yellow: "hsl(var(--nft-yellow))",
+          black: "hsl(var(--nft-black))",
+          white: "hsl(var(--nft-white))",
+          "dark-gray": "hsl(var(--nft-dark-gray))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
