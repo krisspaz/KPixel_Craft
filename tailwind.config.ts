@@ -16,6 +16,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        serif: ['Instrument Serif', 'Georgia', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -43,6 +44,10 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
+        lime: {
+          DEFAULT: "hsl(var(--lime))",
+          foreground: "hsl(var(--lime-foreground))",
+        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
@@ -50,21 +55,6 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
-        },
-        kpixel: {
-          black: "hsl(var(--kpixel-black))",
-          dark: "hsl(var(--kpixel-dark))",
-          gray: "hsl(var(--kpixel-gray))",
-          muted: "hsl(var(--kpixel-muted))",
-          light: "hsl(var(--kpixel-light))",
-          white: "hsl(var(--kpixel-white))",
-          cyan: "hsl(var(--kpixel-cyan))",
-        },
-        nft: {
-          yellow: "hsl(var(--nft-yellow))",
-          black: "hsl(var(--nft-black))",
-          white: "hsl(var(--nft-white))",
-          "dark-gray": "hsl(var(--nft-dark-gray))",
         },
       },
       borderRadius: {

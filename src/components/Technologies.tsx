@@ -1,68 +1,75 @@
 import { FaReact, FaLaravel, FaDocker, FaAws } from "react-icons/fa";
-import { SiTypescript, SiFastapi, SiPostgresql } from "react-icons/si";
+import { SiTypescript, SiFastapi, SiPostgresql, SiVite } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const technologies = [
-  { name: "React", category: "Frontend", icon: <FaReact className="w-6 h-6 text-accent" /> },
-  { name: "TypeScript", category: "Language", icon: <SiTypescript className="w-6 h-6 text-accent" /> },
-  { name: "Laravel", category: "Backend", icon: <FaLaravel className="w-6 h-6 text-accent" /> },
-  { name: "FastAPI", category: "Backend", icon: <SiFastapi className="w-6 h-6 text-accent" /> },
-  { name: "PostgreSQL", category: "Database", icon: <SiPostgresql className="w-6 h-6 text-accent" /> },
-  { name: "Docker", category: "DevOps", icon: <FaDocker className="w-6 h-6 text-accent" /> },
-  { name: "AWS", category: "Cloud", icon: <FaAws className="w-6 h-6 text-accent" /> },
-  { name: "React Native", category: "Mobile", icon: <FaReact className="w-6 h-6 text-accent" /> },
+  { name: "React", category: "Frontend", icon: <FaReact className="w-5 h-5" /> },
+  { name: "TypeScript", category: "Language", icon: <SiTypescript className="w-5 h-5" /> },
+  { name: "Vite", category: "Build", icon: <SiVite className="w-5 h-5" /> },
+  { name: "Laravel", category: "Backend", icon: <FaLaravel className="w-5 h-5" /> },
+  { name: "FastAPI", category: "Backend", icon: <SiFastapi className="w-5 h-5" /> },
+  { name: "PostgreSQL", category: "Database", icon: <SiPostgresql className="w-5 h-5" /> },
+  { name: "Docker", category: "DevOps", icon: <FaDocker className="w-5 h-5" /> },
+  { name: "AWS", category: "Cloud", icon: <FaAws className="w-5 h-5" /> },
 ];
 
 const Technologies = () => {
   return (
-    <section id="tecnologias" className="py-32 relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
+    <section id="stack" className="py-32 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-section" />
 
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
-
-        {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-20">
-          <span
-            className="font-medium text-sm tracking-wider uppercase mb-4 block animate-fade-up text-accent"
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block"
           >
-            Stack tecnológico
-          </span>
-
-          <h2 className="text-4xl sm:text-5xl font-bold text-foreground leading-tight animate-fade-up delay-100">
-            Herramientas que dominamos
-          </h2>
+            Stack Tecnológico
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight"
+          >
+            Herramientas que{" "}
+            <span className="text-gradient font-serif italic font-normal">dominamos</span>
+          </motion.h2>
         </div>
 
-        {/* Technologies Grid */}
-        <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
+        {/* Tech Grid */}
+        <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
           {technologies.map((tech, index) => (
-            <div
+            <motion.div
               key={tech.name}
-              className="group flex items-center gap-3 px-6 py-4 rounded-2xl transition-all duration-300 animate-fade-up border bg-card border-accent/30 hover:border-accent/50 bg-accent/5"
-              style={{
-                animationDelay: `${0.1 * index}s`,
-              }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.05 }}
+              className="group flex items-center gap-3 px-5 py-3 rounded-xl bg-card/50 border border-white/[0.06] hover:border-accent/30 hover:bg-accent/5 transition-all duration-300"
             >
-              <div className="flex-shrink-0">{tech.icon}</div>
-
-              <div>
-                <span className="font-medium text-white">
-                  {tech.name}
-                </span>
-
-                <span className="text-xs text-muted-foreground ml-1">
-                  {tech.category}
-                </span>
+              <div className="text-accent group-hover:text-lime transition-colors">
+                {tech.icon}
               </div>
-            </div>
+              <div>
+                <span className="font-semibold text-foreground text-sm">{tech.name}</span>
+                <span className="text-xs text-muted-foreground ml-2">{tech.category}</span>
+              </div>
+            </motion.div>
           ))}
         </div>
 
-        {/* Additional tech note */}
-        <p className="text-center text-muted-foreground mt-12 animate-fade-up delay-800">
-          Y más: Symfony, Python, Vite, GitHub Actions, Firebase, Redis...
-        </p>
-
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-center text-muted-foreground mt-12 text-sm"
+        >
+          Y más: Symfony, Python, GitHub Actions, Firebase, Redis, React Native...
+        </motion.p>
       </div>
     </section>
   );
