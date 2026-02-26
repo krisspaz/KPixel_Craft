@@ -1,4 +1,4 @@
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
@@ -27,7 +27,7 @@ export const Hero = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-lime"></span>
             </span>
-            Disponible para nuevos proyectos
+            {t("hero.badge")}
           </motion.div>
 
           {/* Main Headline */}
@@ -73,11 +73,11 @@ export const Hero = () => {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
-              href="#proyectos"
+              href="#proceso"
               className="group inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/10 text-foreground text-lg font-semibold rounded-full hover:bg-white/[0.04] hover:border-white/20 transition-all duration-300"
             >
               {t("hero.cta_secondary")}
-              <Play className="w-4 h-4 text-lime" />
+              <ChevronDown className="w-4 h-4 text-lime" />
             </a>
           </motion.div>
         </div>
@@ -90,10 +90,10 @@ export const Hero = () => {
           className="mt-24 lg:mt-32 grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto"
         >
           {[
-            { value: "+3", label: "Años de experiencia" },
-            { value: "99.9%", label: "Uptime garantizado" },
-            { value: "100%", label: "Clientes satisfechos" },
-            { value: "24/7", label: "Soporte disponible" },
+            { value: "+20", label: t("hero.stats.projects") },
+            { value: "+15", label: t("hero.stats.clients") },
+            { value: "+40%", label: t("hero.stats.conversion") },
+            { value: "3-6", label: t("hero.stats.delivery") },
           ].map((stat, i) => (
             <div key={i} className="text-center">
               <div className="text-3xl lg:text-4xl font-black text-foreground mb-1">

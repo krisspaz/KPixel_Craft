@@ -1,4 +1,4 @@
-import { Globe, Smartphone, Bot, Database, ArrowUpRight } from "lucide-react";
+import { Globe, Target, ShoppingCart, Settings, ArrowUpRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
@@ -12,18 +12,18 @@ export const Services = () => {
       gradient: "from-purple-500/20 to-purple-600/5",
     },
     {
-      key: "mobile",
-      icon: Smartphone,
+      key: "landing",
+      icon: Target,
       gradient: "from-lime-400/20 to-lime-500/5",
     },
     {
-      key: "ai",
-      icon: Bot,
+      key: "ecommerce",
+      icon: ShoppingCart,
       gradient: "from-purple-500/20 to-lime-400/5",
     },
     {
-      key: "backend",
-      icon: Database,
+      key: "systems",
+      icon: Settings,
       gradient: "from-lime-400/20 to-purple-500/5",
     },
   ];

@@ -1,50 +1,45 @@
-import { ArrowUpRight, Github, ExternalLink, FolderGit2 } from "lucide-react";
+import { ArrowUpRight, FolderGit2 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Dashboard PyMES",
-    category: "Frontend",
-    description: "Panel administrativo para visualización de datos de pequeñas y medianas empresas.",
-    tech: ["React", "Tailwind", "Vite"],
+    title: "Plataforma de Gestión Empresarial",
+    category: "Sistema Web",
+    description: "Dashboard administrativo que centralizó operaciones, reduciendo tiempos de gestión en un 60% para una empresa en crecimiento.",
+    result: "60% más eficiencia operativa",
     featured: true,
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-    demoUrl: "#",
-    repoUrl: "https://github.com/krisspaz/dashboard-pymes",
   },
   {
-    title: "Web Scraping Engine",
-    category: "Data Engineering",
-    description: "Bot automatizado para extracción y minería de datos web.",
-    tech: ["Python", "Selenium", "BS4"],
-    featured: false,
-    image: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?q=80&w=2128&auto=format&fit=crop",
-    demoUrl: "#",
-    repoUrl: "https://github.com/krisspaz/scraping",
-  },
-  {
-    title: "Sales Report Generator",
-    category: "Automation",
-    description: "Script para generación automática de reportes de ventas y análisis financiero.",
-    tech: ["Python", "Pandas", "Excel"],
+    title: "Landing de Captación de Leads",
+    category: "Landing Page",
+    description: "Página de aterrizaje para campaña de captación que triplicó las conversiones respecto al sitio anterior.",
+    result: "3x más conversiones",
     featured: false,
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
-    demoUrl: "#",
-    repoUrl: "https://github.com/krisspaz/python-sales-report-generator",
   },
   {
-    title: "API de Gestión",
-    category: "Backend",
-    description: "Sistema RESTful escalable con autenticación y manejo de bases de datos.",
-    tech: ["FastAPI", "PostgreSQL", "Docker"],
-    featured: true,
+    title: "Sitio Web Corporativo",
+    category: "Página Web",
+    description: "Presencia digital profesional que posicionó a la marca como referente en su sector desde el primer mes.",
+    result: "Posicionamiento inmediato",
+    featured: false,
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
-    demoUrl: "#",
-    repoUrl: "https://github.com/krisspaz",
+  },
+  {
+    title: "Automatización de Reportes",
+    category: "Sistema a Medida",
+    description: "Sistema automatizado de generación de reportes financieros que eliminó 20 horas semanales de trabajo manual.",
+    result: "20 hrs/semana ahorradas",
+    featured: true,
+    image: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?q=80&w=2128&auto=format&fit=crop",
   },
 ];
 
 const Portfolio = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="proyectos" className="py-32 relative">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -58,7 +53,7 @@ const Portfolio = () => {
               className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 flex items-center gap-2"
             >
               <FolderGit2 className="w-4 h-4" />
-              Portafolio
+              {t("portfolio.subtitle")}
             </motion.span>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -66,8 +61,8 @@ const Portfolio = () => {
               viewport={{ once: true }}
               className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight"
             >
-              Proyectos{" "}
-              <span className="text-gradient font-serif italic font-normal">destacados</span>
+              {t("portfolio.title")}{" "}
+              <span className="text-gradient font-serif italic font-normal">{t("portfolio.title_highlight")}</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0 }}
@@ -76,22 +71,9 @@ const Portfolio = () => {
               transition={{ delay: 0.1 }}
               className="mt-4 text-muted-foreground text-lg"
             >
-              Una selección de trabajos recientes, enfocados en automatización, análisis de datos y desarrollo web.
+              {t("portfolio.description")}
             </motion.p>
           </div>
-
-          <motion.a
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            href="https://github.com/krisspaz"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/[0.08] bg-card/50 hover:bg-accent hover:text-white hover:border-accent transition-all duration-300 text-sm font-semibold"
-          >
-            Ver GitHub
-            <Github className="w-4 h-4" />
-          </motion.a>
         </div>
 
         {/* Projects Grid */}
@@ -123,45 +105,18 @@ const Portfolio = () => {
                   <span className="inline-flex items-center rounded-full bg-accent/90 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
                     {project.category}
                   </span>
-                  <div className="flex gap-2 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                    <a
-                      href={project.repoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 bg-background/50 hover:bg-background rounded-full backdrop-blur-md text-foreground transition-colors"
-                    >
-                      <Github className="w-4 h-4" />
-                    </a>
-                    {project.demoUrl !== "#" && (
-                      <a
-                        href={project.demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 bg-background/50 hover:bg-accent hover:text-white rounded-full backdrop-blur-md transition-all"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                      </a>
-                    )}
-                  </div>
+                  <ArrowUpRight className="w-5 h-5 text-muted-foreground opacity-0 group-hover:opacity-100 transition-all text-accent" />
                 </div>
 
                 <div className="translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-2xl font-bold text-foreground mb-2 flex items-center gap-2">
+                  <h3 className="text-2xl font-bold text-foreground mb-2">
                     {project.title}
-                    <ArrowUpRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-all text-accent" />
                   </h3>
                   <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((t) => (
-                      <span
-                        key={t}
-                        className="px-2.5 py-0.5 rounded-md text-xs font-medium bg-white/[0.05] text-foreground/70 border border-white/[0.08]"
-                      >
-                        {t}
-                      </span>
-                    ))}
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-lime/10 border border-lime/20">
+                    <span className="text-xs font-bold text-lime">{project.result}</span>
                   </div>
                 </div>
               </div>

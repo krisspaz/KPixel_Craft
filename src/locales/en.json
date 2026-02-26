@@ -1,83 +1,350 @@
 {
     "nav": {
         "services": "Services",
-        "stack": "Stack",
+        "process": "Process",
+        "pricing": "Pricing",
         "projects": "Projects",
         "about": "About",
-        "start_project": "Start Project",
+        "start_project": "Request a Quote",
         "contact": "Contact"
     },
     "hero": {
+        "badge": "Accepting new projects",
         "headline": {
-            "part1": "TRANSFORMING",
-            "part2": "IDEAS INTO",
-            "part3": "SCALABLE",
-            "part4": "SOFTWARE"
+            "part1": "YOUR BUSINESS DESERVES",
+            "part2": "A DIGITAL PRESENCE",
+            "part3": "THAT",
+            "part4": "SELLS"
         },
-        "subheadline": "KPixel Craft combines robust architecture with high-fidelity design to create digital experiences that drive your business.",
-        "cta_primary": "Start Project",
-        "cta_secondary": "View Portfolio",
-        "floating": {
-            "uptime": "Uptime",
-            "infra": "Infrastructure Health",
-            "custom": "Custom Dev"
+        "subheadline": "We design and develop websites, landing pages, and online stores focused on one single goal: growing your business, converting visitors, and positioning your brand as an industry leader.",
+        "cta_primary": "Request a Quote",
+        "cta_secondary": "See How We Work",
+        "stats": {
+            "projects": "Projects delivered",
+            "clients": "Active clients",
+            "conversion": "Avg. conversion lift",
+            "delivery": "Avg. weeks to deliver"
         }
     },
     "services": {
-        "subtitle": "Our Specialties",
-        "title": "Solutions for the",
-        "title_highlight": "Next Generation",
-        "view_all": "View All Services",
+        "subtitle": "What We Do",
+        "title": "Web solutions that drive",
+        "title_highlight": "real results",
         "items": {
             "web": {
-                "name": "Web Development",
-                "desc": "Fast, SEO-friendly, and scalable sites and applications."
+                "name": "Strategic Websites",
+                "desc": "Not just a pretty site. A sales tool designed to position your brand, build trust, and turn visitors into customers."
             },
-            "mobile": {
-                "name": "Mobile Apps",
-                "desc": "Native experiences on iOS and Android with React Native."
+            "landing": {
+                "name": "High-Converting Landing Pages",
+                "desc": "Landing pages optimized for campaigns, launches, or lead capture. Every element designed to maximize your return on investment."
             },
-            "ai": {
-                "name": "Artificial Intelligence",
-                "desc": "LLM integration and process automation."
+            "ecommerce": {
+                "name": "Professional Online Stores",
+                "desc": "Ecommerce that sells. Product catalog, payment gateways, inventory, and a shopping experience that retains customers."
             },
-            "backend": {
-                "name": "Backend & Cloud",
-                "desc": "Serverless architectures and robust databases."
+            "systems": {
+                "name": "Custom Web Systems",
+                "desc": "Internal platforms, dashboards, CRMs, or management tools built exactly for your operation's needs."
             }
         }
     },
-    "featured": {
-        "subtitle": "Success Story",
-        "title": "UNIFIED",
-        "title2": "COMMERCE",
-        "title_highlight": "PLATFORM",
-        "desc": "We developed a comprehensive solution that centralizes inventory, sales, and logistics in real-time for a leading retailer.",
-        "points": {
-            "1": "Real-time synchronization",
-            "2": "Advanced analytics dashboard",
-            "3": "Scalable Serverless Architecture"
+    "process": {
+        "subtitle": "How We Work",
+        "title": "A clear process,",
+        "title_highlight": "no surprises",
+        "steps": {
+            "1": {
+                "name": "Discovery",
+                "desc": "We understand your business, commercial goals, and audience. Without this, any design is a shot in the dark."
+            },
+            "2": {
+                "name": "Strategy",
+                "desc": "We define your site's architecture, key content, and conversion flow before writing a single line of code."
+            },
+            "3": {
+                "name": "Development",
+                "desc": "We build with a focus on performance, load speed, and user experience. We show you progress at every stage."
+            },
+            "4": {
+                "name": "Launch",
+                "desc": "We deliver your project ready to operate. We support you in the first weeks and optimize based on real results."
+            }
+        }
+    },
+    "benefits": {
+        "subtitle": "Concrete Benefits",
+        "title": "What you get when you work",
+        "title_highlight": "with us",
+        "items": {
+            "1": {
+                "name": "A website that works 24/7",
+                "desc": "Your site sells, informs, and captures leads even while you sleep. It's your best digital salesperson."
+            },
+            "2": {
+                "name": "Professional positioning",
+                "desc": "From day one, your brand projects authority and trust ahead of your competition."
+            },
+            "3": {
+                "name": "More inquiries and conversions",
+                "desc": "Every page is designed with a clear goal: getting the visitor to take action."
+            },
+            "4": {
+                "name": "Data-driven decisions",
+                "desc": "We integrate analytics and tracking tools so you can make decisions based on real data."
+            },
+            "5": {
+                "name": "Full ownership",
+                "desc": "Your platform is yours. No dependencies, no hidden monthly fees, no lock-ins."
+            },
+            "6": {
+                "name": "Post-launch support",
+                "desc": "We don't disappear after delivery. We're here to make sure everything runs as it should."
+            }
+        }
+    },
+    "differentiation": {
+        "subtitle": "The Difference",
+        "title": "Why not just hire",
+        "title_highlight": "any freelancer?",
+        "intro": "We know there are cheaper options. But cheap almost always costs more in the end. Here's what sets us apart:",
+        "comparison": {
+            "headers": {
+                "aspect": "Aspect",
+                "freelancer": "Common freelancer",
+                "kpixel": "KPixel Craft"
+            },
+            "rows": {
+                "1": {
+                    "aspect": "Work process",
+                    "freelancer": "Improvised, no methodology",
+                    "kpixel": "Structured in 4 clear phases"
+                },
+                "2": {
+                    "aspect": "Project vision",
+                    "freelancer": "Just code and design",
+                    "kpixel": "Business strategy + development"
+                },
+                "3": {
+                    "aspect": "Delivery guarantee",
+                    "freelancer": "Frequent delays",
+                    "kpixel": "Committed and met deadlines"
+                },
+                "4": {
+                    "aspect": "Post-launch support",
+                    "freelancer": "Disappears after delivery",
+                    "kpixel": "Ongoing support"
+                },
+                "5": {
+                    "aspect": "Communication",
+                    "freelancer": "Sporadic and informal",
+                    "kpixel": "Clear reports and defined channels"
+                }
+            }
+        }
+    },
+    "portfolio": {
+        "subtitle": "Projects",
+        "title": "Results",
+        "title_highlight": "that speak",
+        "description": "A selection of projects where what matters isn't the technology, but the impact we generated for each client.",
+        "view_all": "View All Projects"
+    },
+    "about": {
+        "subtitle": "About Us",
+        "title": "We're not a website factory.",
+        "title_highlight": "We're your digital partner.",
+        "description": "KPixel Craft was born from a conviction: growing businesses deserve digital solutions with the same seriousness that large corporations receive. We don't sell templates or generic solutions. Every project we take on receives strategic attention, professional development, and a real commitment to your business results.",
+        "values": {
+            "1": "We understand your business before proposing solutions",
+            "2": "Every design decision serves a commercial objective",
+            "3": "Direct, transparent, and professional communication",
+            "4": "We deliver digital assets, not expenses"
         },
-        "view_case": "View Case",
         "stats": {
-            "sales": "Total Sales"
+            "years": "Years in the market",
+            "satisfaction": "Satisfaction",
+            "support": "Support"
+        }
+    },
+    "contact": {
+        "badge": "Let's start your project",
+        "title": "Your next step starts",
+        "title_highlight": "here",
+        "description": "Tell us what your business needs. No commitment, no fine print. We evaluate your project and give you a clear proposal in less than 48 hours.",
+        "form": {
+            "name": "Full name",
+            "name_placeholder": "Your name",
+            "email": "Email address",
+            "email_placeholder": "you@company.com",
+            "subject": "What do you need?",
+            "subject_placeholder": "Website, landing page, ecommerce...",
+            "message": "Tell us about your project",
+            "message_placeholder": "Briefly describe your business, your goals, and what you hope to achieve with this project...",
+            "submit": "Request a Quote"
+        },
+        "info": {
+            "phone_label": "Call us",
+            "phone_detail": "Monday to Friday, 9am - 6pm CST",
+            "email_label": "Email us",
+            "email_detail": "We respond within 24 hours",
+            "location_label": "Location",
+            "location_detail": "Remote projects across Latin America"
+        }
+    },
+    "pricing": {
+        "subtitle": "Investment",
+        "title": "Clear solutions,",
+        "title_highlight": "transparent pricing",
+        "description": "Every project is unique, but we believe in transparency. These are our investment ranges based on the type of solution you need. No surprises, no hidden costs.",
+        "toggle": {
+            "standard": "Standard",
+            "premium": "Boutique Premium"
+        },
+        "premium_badge": "Premium",
+        "cta": "Request Proposal",
+        "note": "All prices are referential. The final scope, specific features, and delivery timelines are defined in a personalized proposal at no cost or commitment.",
+        "plans": {
+            "web": {
+                "name": "Corporate Website",
+                "desc": "Your digital business card. A professional site that positions your brand with authority, builds trust from the first click, and serves as a permanent touchpoint with your clients.",
+                "price_usd": "350",
+                "price_gtq": "2,700",
+                "price_usd_premium": "420",
+                "price_gtq_premium": "3,250",
+                "includes": [
+                    "Domain and hosting included (1st year)",
+                    "Strategic conversion-oriented design",
+                    "Responsive on all devices",
+                    "Baseline SEO optimization",
+                    "Integrated contact form",
+                    "Delivery in 3-4 weeks"
+                ],
+                "includes_premium": [
+                    "Professional domain and hosting included (1st year)",
+                    "Strategic brand consulting (1hr)",
+                    "Custom UX/UI design (no templates)",
+                    "Advanced SEO optimization",
+                    "Professional copywriting included",
+                    "Priority development line (Fast delivery)"
+                ]
+            },
+            "landing": {
+                "name": "High-Conversion Landing Page",
+                "desc": "A page designed with a single goal: converting visitors into customers or leads. Ideal for ad campaigns, product launches, or qualified prospect capture.",
+                "price_usd": "450",
+                "price_gtq": "3,500",
+                "price_usd_premium": "540",
+                "price_gtq_premium": "4,150",
+                "popular": true,
+                "includes": [
+                    "Domain and hosting included (1st year)",
+                    "Strategic conversion architecture",
+                    "Persuasive copywriting included",
+                    "Email marketing integration",
+                    "A/B testing ready to optimize",
+                    "Delivery in 2-3 weeks"
+                ],
+                "includes_premium": [
+                    "Professional domain and hosting included (1st year)",
+                    "High-performance conversion architecture",
+                    "Advanced copywriting (Neuro-sales)",
+                    "Complete funnel automation",
+                    "Advanced conversion tracking",
+                    "Priority post-launch support"
+                ]
+            },
+            "ecommerce": {
+                "name": "Professional Ecommerce",
+                "desc": "Your online store built to sell. Product catalog, shopping cart, payment gateways, and a shopping experience that builds trust and retains customers.",
+                "price_usd": "700",
+                "price_gtq": "5,400",
+                "price_usd_premium": "840",
+                "price_gtq_premium": "6,500",
+                "includes": [
+                    "Domain and hosting included (1st year)",
+                    "Manageable product catalog",
+                    "Configured payment gateways",
+                    "Basic inventory management",
+                    "Shopping experience-focused design",
+                    "Delivery in 4-6 weeks"
+                ],
+                "includes_premium": [
+                    "Scalable domain and hosting included (1st year)",
+                    "Hyper-optimized shopping experience",
+                    "Abandoned cart recovery",
+                    "ERP or billing integration",
+                    "Team training (2hrs)",
+                    "Performance guarantee"
+                ]
+            },
+            "systems": {
+                "name": "Custom Web System",
+                "desc": "Internal platforms, dashboards, CRMs, or management tools designed specifically for your operation. Automate processes and take control of your data.",
+                "price_usd": "950",
+                "price_gtq": "7,300",
+                "price_usd_premium": "1,140",
+                "price_gtq_premium": "8,800",
+                "includes": [
+                    "Domain and hosting included (1st year)",
+                    "Complete requirements analysis",
+                    "Scalable architecture",
+                    "Custom admin panel",
+                    "Integrated reports and metrics",
+                    "Delivery based on defined scope"
+                ],
+                "includes_premium": [
+                    "Dedicated Cloud Infrastructure (1st year)",
+                    "Process analysis and consulting",
+                    "API and Webhooks development",
+                    "Granular roles and permissions",
+                    "Bank-level security & encryption",
+                    "Service Level Agreement (SLA)"
+                ]
+            }
         }
     },
     "footer": {
-        "subscribe_title": "Subscribe to our notifications",
+        "tagline": "Digital solutions that drive results.",
+        "subscribe_title": "Subscribe to our newsletter",
         "email_placeholder": "Email address",
         "company": "Company",
         "support": "Support",
         "social": "Social",
-        "rights": "© 2025 KPixel Craft. All rights reserved.",
+        "rights": "© 2026 KPixel Craft. All rights reserved.",
         "links": {
             "about": "About",
-            "careers": "Careers",
-            "ventures": "Ventures",
-            "grants": "Grants",
+            "services": "Services",
+            "process": "Process",
             "help": "Help Center",
             "terms": "Terms of Service",
             "privacy": "Privacy Policy"
         }
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Everything you need to know before starting",
+        "items": [
+            {
+                "q": "What happens after I request a quote?",
+                "a": "We'll schedule a brief discovery call (15-20 min) to understand your goals, needs, and confirm if we're the right fit for your project. Then, we prepare a detailed strategic proposal."
+            },
+            {
+                "q": "Do you work with purchased templates?",
+                "a": "No. Every project starts from a blank canvas and is designed specifically for your business conversion goals, ensuring a fast, unique, and optimized digital presence."
+            },
+            {
+                "q": "Who owns the source code and domain when finished?",
+                "a": "You are 100% the owner. Everything is registered under your company's name (domain, hosting, code), and we hand over all administrative access upon completion."
+            },
+            {
+                "q": "What are the payment terms?",
+                "a": "We work with a standard 50% upfront to reserve your spot in our development pipeline and start the strategy phase, and 50% upon launch. We accept wire transfers and credit cards."
+            },
+            {
+                "q": "Do you offer technical support after launch?",
+                "a": "Yes, our Premium projects include one month of free priority post-launch support. For ongoing maintenance, we offer monthly retainers adapted to your operation level."
+            }
+        ]
     }
 }

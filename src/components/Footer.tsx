@@ -1,4 +1,4 @@
-import { Twitter, Instagram, Youtube, Github, ArrowRight } from "lucide-react";
+import { Instagram, Github, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
@@ -19,7 +19,7 @@ export const Footer = () => {
               KPixel<span className="text-accent">Craft</span>
             </h3>
             <p className="text-muted-foreground text-sm mb-6">
-              Software que escala contigo.
+              {t("footer.tagline")}
             </p>
             <div className="flex gap-2">
               <input
@@ -41,8 +41,8 @@ export const Footer = () => {
               </h4>
               <ul className="space-y-3 text-sm">
                 <li><a href="#nosotros" className="text-foreground/70 hover:text-accent transition-colors">{t("footer.links.about")}</a></li>
-                <li><a href="#" className="text-foreground/70 hover:text-accent transition-colors">{t("footer.links.careers")}</a></li>
-                <li><a href="#" className="text-foreground/70 hover:text-accent transition-colors">{t("footer.links.ventures")}</a></li>
+                <li><a href="#servicios" className="text-foreground/70 hover:text-accent transition-colors">{t("footer.links.services")}</a></li>
+                <li><a href="#proceso" className="text-foreground/70 hover:text-accent transition-colors">{t("footer.links.process")}</a></li>
               </ul>
             </div>
             <div>
@@ -62,14 +62,13 @@ export const Footer = () => {
               <ul className="space-y-3 text-sm">
                 <li><a href="https://github.com/krisspaz" target="_blank" rel="noopener noreferrer" className="text-foreground/70 hover:text-accent transition-colors flex items-center gap-2"><Github className="w-4 h-4" /> GitHub</a></li>
                 <li><a href="https://instagram.com/krisspaz_" target="_blank" rel="noopener noreferrer" className="text-foreground/70 hover:text-accent transition-colors flex items-center gap-2"><Instagram className="w-4 h-4" /> Instagram</a></li>
-                <li><a href="#" className="text-foreground/70 hover:text-accent transition-colors flex items-center gap-2"><Twitter className="w-4 h-4" /> Twitter</a></li>
               </ul>
             </div>
           </div>
         </div>
 
         <div className="border-t border-white/[0.04] pt-8 flex flex-col sm:flex-row justify-between items-center text-muted-foreground text-xs gap-4">
-          <p>© 2026 KPixel Craft. Todos los derechos reservados.</p>
+          <p>{t("footer.rights")}</p>
           <div className="flex gap-6">
             <a href="/privacy" className="hover:text-foreground transition-colors">{t("footer.links.privacy")}</a>
             <a href="/terms" className="hover:text-foreground transition-colors">{t("footer.links.terms")}</a>

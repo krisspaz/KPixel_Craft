@@ -20,7 +20,8 @@ export const Navbar = () => {
 
     const navLinks = [
         { href: "#servicios", label: t("nav.services") },
-        { href: "#stack", label: t("nav.stack") },
+        { href: "#proceso", label: t("nav.process") },
+        { href: "#inversion", label: t("nav.pricing") },
         { href: "#proyectos", label: t("nav.projects") },
         { href: "#nosotros", label: t("nav.about") },
         { href: "#contacto", label: t("nav.contact") },
@@ -30,8 +31,8 @@ export const Navbar = () => {
         <>
             <nav
                 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-                        ? "bg-background/80 backdrop-blur-xl border-b border-white/[0.06] shadow-lg shadow-black/20"
-                        : "bg-transparent"
+                    ? "bg-background/80 backdrop-blur-xl border-b border-white/[0.06] shadow-lg shadow-black/20"
+                    : "bg-transparent"
                     }`}
             >
                 <div className="max-w-7xl mx-auto px-6 lg:px-10">

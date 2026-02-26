@@ -1,30 +1,29 @@
-import { Zap, ShieldCheck, HeartHandshake, Rocket } from "lucide-react";
+import { Target, MessageSquare, TrendingUp, Shield } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
 const reasons = [
   {
-    icon: Zap,
-    title: "Velocidad y Eficiencia",
-    description: "Stacks modernos (Vite, React, FastAPI) que garantizan tiempos de carga instantáneos y desarrollo ágil.",
+    icon: Target,
+    titleKey: "about.values.1",
   },
   {
-    icon: ShieldCheck,
-    title: "Seguridad y Escalabilidad",
-    description: "Arquitecturas diseñadas para crecer contigo. Listas para miles de usuarios desde el día uno.",
+    icon: TrendingUp,
+    titleKey: "about.values.2",
   },
   {
-    icon: HeartHandshake,
-    title: "Trato Personalizado",
-    description: "No somos una fábrica. Somos tus socios técnicos. Hablas directamente con los desarrolladores.",
+    icon: MessageSquare,
+    titleKey: "about.values.3",
   },
   {
-    icon: Rocket,
-    title: "Enfoque en Resultados",
-    description: "No solo escribimos código; entendemos tu negocio para crear herramientas que aumenten tu facturación.",
+    icon: Shield,
+    titleKey: "about.values.4",
   },
 ];
 
 export const WhyUs = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="nosotros" className="py-32 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px]" />
@@ -40,18 +39,16 @@ export const WhyUs = () => {
               viewport={{ once: true }}
             >
               <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block">
-                Sobre Nosotros
+                {t("about.subtitle")}
               </span>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6">
-                Más que código, creamos{" "}
+                {t("about.title")}{" "}
                 <span className="text-gradient font-serif italic font-normal">
-                  soluciones reales
+                  {t("about.title_highlight")}
                 </span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
-                En KPixel Craft combinamos creatividad con ingeniería.
-                Entendemos que detrás de cada proyecto hay un sueño o un objetivo de negocio.
-                Nos diferenciamos por nuestra transparencia y obsesión por el detalle.
+                {t("about.description")}
               </p>
             </motion.div>
 
@@ -64,9 +61,9 @@ export const WhyUs = () => {
               className="grid grid-cols-3 gap-6 border-t border-border pt-8"
             >
               {[
-                { value: "+3", label: "Años" },
-                { value: "100%", label: "Satisfacción" },
-                { value: "24/7", label: "Soporte" },
+                { value: "+3", label: t("about.stats.years") },
+                { value: "100%", label: t("about.stats.satisfaction") },
+                { value: "24/7", label: t("about.stats.support") },
               ].map((stat, i) => (
                 <div key={i}>
                   <p className="text-3xl font-black text-foreground">{stat.value}</p>
@@ -76,11 +73,11 @@ export const WhyUs = () => {
             </motion.div>
           </div>
 
-          {/* Right — Cards */}
+          {/* Right — Value Cards */}
           <div className="grid sm:grid-cols-2 gap-4">
             {reasons.map((reason, index) => (
               <motion.div
-                key={reason.title}
+                key={reason.titleKey}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -90,8 +87,9 @@ export const WhyUs = () => {
                 <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-accent transition-colors duration-300">
                   <reason.icon className="w-6 h-6 text-accent group-hover:text-white transition-colors" />
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-2">{reason.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{reason.description}</p>
+                <h3 className="text-base font-bold text-foreground leading-snug">
+                  {t(reason.titleKey)}
+                </h3>
               </motion.div>
             ))}
           </div>

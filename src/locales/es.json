@@ -1,83 +1,350 @@
 {
     "nav": {
         "services": "Servicios",
-        "stack": "Stack",
+        "process": "Proceso",
+        "pricing": "Inversión",
         "projects": "Proyectos",
         "about": "Nosotros",
-        "start_project": "Iniciar Proyecto",
+        "start_project": "Solicitar Cotización",
         "contact": "Contacto"
     },
     "hero": {
+        "badge": "Aceptando nuevos proyectos",
         "headline": {
-            "part1": "TRANSFORMANDO",
-            "part2": "IDEAS EN",
-            "part3": "SOFTWARE",
-            "part4": "ESCALABLE"
+            "part1": "TU NEGOCIO MERECE",
+            "part2": "UNA PRESENCIA",
+            "part3": "DIGITAL",
+            "part4": "QUE VENDA"
         },
-        "subheadline": "KPixel Craft combina arquitectura robusta con diseño de alta fidelidad para crear experiencias digitales que impulsan tu negocio.",
-        "cta_primary": "Iniciar Proyecto",
-        "cta_secondary": "Ver Portafolio",
-        "floating": {
-            "uptime": "Disponibilidad",
-            "infra": "Salud de Infraestructura",
-            "custom": "Desarrollo a Medida"
+        "subheadline": "Diseñamos y desarrollamos páginas web, landing pages y tiendas online enfocadas en un solo objetivo: que tu negocio crezca, convierta y se posicione como referente en tu industria.",
+        "cta_primary": "Solicitar Cotización",
+        "cta_secondary": "Ver Cómo Trabajamos",
+        "stats": {
+            "projects": "Proyectos entregados",
+            "clients": "Clientes activos",
+            "conversion": "Conversión promedio",
+            "delivery": "Semanas promedio de entrega"
         }
     },
     "services": {
-        "subtitle": "Nuestras Especialidades",
-        "title": "Soluciones para la",
-        "title_highlight": "Próxima Generación",
-        "view_all": "Ver Todos los Servicios",
+        "subtitle": "Lo Que Hacemos",
+        "title": "Soluciones web que generan",
+        "title_highlight": "resultados reales",
         "items": {
             "web": {
-                "name": "Desarrollo Web",
-                "desc": "Sitios y aplicaciones rápidas, SEO friendly y escalables."
+                "name": "Páginas Web Estratégicas",
+                "desc": "No solo un sitio bonito. Una herramienta de ventas diseñada para posicionar tu marca, generar confianza y convertir visitantes en clientes."
             },
-            "mobile": {
-                "name": "Apps Móviles",
-                "desc": "Experiencias nativas en iOS y Android con React Native."
+            "landing": {
+                "name": "Landing Pages que Convierten",
+                "desc": "Páginas de aterrizaje optimizadas para campañas, lanzamientos o captación de leads. Cada elemento diseñado para maximizar tu retorno de inversión."
             },
-            "ai": {
-                "name": "Inteligencia Artificial",
-                "desc": "Integración de LLMs y automatización de procesos."
+            "ecommerce": {
+                "name": "Tiendas Online Profesionales",
+                "desc": "Ecommerce que vende. Catálogo de productos, pasarelas de pago, inventario y una experiencia de compra que fideliza a tus clientes."
             },
-            "backend": {
-                "name": "Backend & Cloud",
-                "desc": "Arquitecturas serverless y bases de datos robustas."
+            "systems": {
+                "name": "Sistemas Web a Medida",
+                "desc": "Plataformas internas, dashboards, CRMs o herramientas de gestión construidas exactamente para las necesidades de tu operación."
             }
         }
     },
-    "featured": {
-        "subtitle": "Caso de Éxito",
-        "title": "PLATAFORMA",
-        "title2": "DE COMERCIO",
-        "title_highlight": "UNIFICADO",
-        "desc": "Desarrollamos una solución integral que centraliza inventario, ventas y logística en tiempo real para un retail líder.",
-        "points": {
-            "1": "Sincronización en tiempo real",
-            "2": "Dashboard de analítica avanzada",
-            "3": "Arquitectura Serverless Escalable"
+    "process": {
+        "subtitle": "Cómo Trabajamos",
+        "title": "Un proceso claro,",
+        "title_highlight": "sin sorpresas",
+        "steps": {
+            "1": {
+                "name": "Diagnóstico",
+                "desc": "Entendemos tu negocio, tus objetivos comerciales y tu audiencia. Sin esto, cualquier diseño es un tiro al aire."
+            },
+            "2": {
+                "name": "Estrategia",
+                "desc": "Definimos la arquitectura de tu sitio, el contenido clave y el flujo de conversión antes de escribir una sola línea de código."
+            },
+            "3": {
+                "name": "Desarrollo",
+                "desc": "Construimos con enfoque en rendimiento, velocidad de carga y experiencia de usuario. Te mostramos avances en cada etapa."
+            },
+            "4": {
+                "name": "Lanzamiento",
+                "desc": "Entregamos tu proyecto listo para operar. Te acompañamos en las primeras semanas y optimizamos según resultados reales."
+            }
+        }
+    },
+    "benefits": {
+        "subtitle": "Beneficios Concretos",
+        "title": "Lo que obtienes al trabajar",
+        "title_highlight": "con nosotros",
+        "items": {
+            "1": {
+                "name": "Una web que trabaja 24/7",
+                "desc": "Tu sitio vende, informa y capta clientes incluso cuando duermes. Es tu mejor vendedor digital."
+            },
+            "2": {
+                "name": "Posicionamiento profesional",
+                "desc": "Desde el primer día, tu marca proyecta autoridad y confianza frente a tu competencia."
+            },
+            "3": {
+                "name": "Más consultas y conversiones",
+                "desc": "Cada página está diseñada con un objetivo claro: que el visitante tome acción."
+            },
+            "4": {
+                "name": "Métricas para decidir",
+                "desc": "Integramos analytics y herramientas de seguimiento para que tomes decisiones basadas en datos reales."
+            },
+            "5": {
+                "name": "Propiedad total",
+                "desc": "Tu plataforma es tuya. Sin dependencias, sin rentas mensuales ocultas, sin candados."
+            },
+            "6": {
+                "name": "Soporte post-lanzamiento",
+                "desc": "No desaparecemos después de entregar. Te acompañamos para asegurar que todo funcione como debe."
+            }
+        }
+    },
+    "differentiation": {
+        "subtitle": "La Diferencia",
+        "title": "¿Por qué no contratar a",
+        "title_highlight": "un freelancer cualquiera?",
+        "intro": "Sabemos que hay opciones más baratas. Pero barato casi siempre sale caro. Esto es lo que nos diferencia:",
+        "comparison": {
+            "headers": {
+                "aspect": "Aspecto",
+                "freelancer": "Freelancer común",
+                "kpixel": "KPixel Craft"
+            },
+            "rows": {
+                "1": {
+                    "aspect": "Proceso de trabajo",
+                    "freelancer": "Improvisado, sin metodología",
+                    "kpixel": "Estructurado en 4 fases claras"
+                },
+                "2": {
+                    "aspect": "Visión del proyecto",
+                    "freelancer": "Solo código y diseño",
+                    "kpixel": "Estrategia de negocio + desarrollo"
+                },
+                "3": {
+                    "aspect": "Garantía de entrega",
+                    "freelancer": "Retrasos frecuentes",
+                    "kpixel": "Fechas comprometidas y cumplidas"
+                },
+                "4": {
+                    "aspect": "Soporte posterior",
+                    "freelancer": "Desaparece tras entregar",
+                    "kpixel": "Acompañamiento continuo"
+                },
+                "5": {
+                    "aspect": "Comunicación",
+                    "freelancer": "Esporádica e informal",
+                    "kpixel": "Reportes claros y canales definidos"
+                }
+            }
+        }
+    },
+    "portfolio": {
+        "subtitle": "Proyectos",
+        "title": "Resultados",
+        "title_highlight": "que hablan",
+        "description": "Una selección de proyectos donde lo importante no es la tecnología, sino el impacto que generamos para cada cliente.",
+        "view_all": "Ver Todos los Proyectos"
+    },
+    "about": {
+        "subtitle": "Sobre Nosotros",
+        "title": "No somos una fábrica de sitios web.",
+        "title_highlight": "Somos tu socio digital.",
+        "description": "KPixel Craft nació con una convicción: las empresas en crecimiento merecen soluciones digitales con la misma seriedad que reciben las grandes corporaciones. No vendemos plantillas ni soluciones genéricas. Cada proyecto que tomamos recibe atención estratégica, desarrollo profesional y un compromiso real con los resultados de tu negocio.",
+        "values": {
+            "1": "Entendemos tu negocio antes de proponer soluciones",
+            "2": "Cada decisión de diseño responde a un objetivo comercial",
+            "3": "Comunicación directa, transparente y profesional",
+            "4": "Entregamos activos digitales, no gastos"
         },
-        "view_case": "Ver Caso",
         "stats": {
-            "sales": "Total Ventas"
+            "years": "Años en el mercado",
+            "satisfaction": "Satisfacción",
+            "support": "Soporte"
+        }
+    },
+    "contact": {
+        "badge": "Iniciemos tu proyecto",
+        "title": "Tu próximo paso empieza",
+        "title_highlight": "aquí",
+        "description": "Cuéntanos qué necesita tu negocio. Sin compromiso, sin letra pequeña. Evaluamos tu proyecto y te damos una propuesta clara en menos de 48 horas.",
+        "form": {
+            "name": "Nombre completo",
+            "name_placeholder": "Tu nombre",
+            "email": "Correo electrónico",
+            "email_placeholder": "tu@empresa.com",
+            "subject": "¿Qué necesitas?",
+            "subject_placeholder": "Página web, landing page, ecommerce...",
+            "message": "Cuéntanos sobre tu proyecto",
+            "message_placeholder": "Describe brevemente tu negocio, tus objetivos y qué esperas lograr con este proyecto...",
+            "submit": "Solicitar Cotización"
+        },
+        "info": {
+            "phone_label": "Llámanos",
+            "phone_detail": "Lunes a Viernes, 9am - 6pm CST",
+            "email_label": "Escríbenos",
+            "email_detail": "Respondemos en menos de 24 horas",
+            "location_label": "Ubicación",
+            "location_detail": "Proyectos remotos en toda Latinoamérica"
+        }
+    },
+    "pricing": {
+        "subtitle": "Inversión",
+        "title": "Soluciones claras,",
+        "title_highlight": "precios transparentes",
+        "description": "Cada proyecto es único, pero creemos en la transparencia. Estos son nuestros rangos de inversión según el tipo de solución que necesitas. Sin sorpresas, sin costos ocultos.",
+        "toggle": {
+            "standard": "Estándar",
+            "premium": "Boutique Premium"
+        },
+        "premium_badge": "Premium",
+        "cta": "Solicitar Propuesta",
+        "note": "Todos los precios son referenciales. El alcance final, funcionalidades específicas y plazos de entrega se definen en una propuesta personalizada sin costo ni compromiso.",
+        "plans": {
+            "web": {
+                "name": "Página Web Corporativa",
+                "desc": "Tu carta de presentación digital. Un sitio profesional que posiciona tu marca con autoridad, genera confianza desde el primer clic y trabaja como punto de contacto permanente con tus clientes.",
+                "price_usd": "350",
+                "price_gtq": "2,700",
+                "price_usd_premium": "420",
+                "price_gtq_premium": "3,250",
+                "includes": [
+                    "Dominio y hosting incluido (1er año)",
+                    "Diseño estratégico orientado a conversión",
+                    "Responsive en todos los dispositivos",
+                    "Optimización SEO base",
+                    "Formulario de contacto integrado",
+                    "Entrega en 3-4 semanas"
+                ],
+                "includes_premium": [
+                    "Dominio y hosting profesional incluido (1er año)",
+                    "Consultoría estratégica de marca (1hr)",
+                    "Diseño UX/UI a la medida (sin plantillas)",
+                    "Optimización SEO avanzada",
+                    "Copywriting profesional incluido",
+                    "Prioridad en línea de desarrollo (Entrega rápida)"
+                ]
+            },
+            "landing": {
+                "name": "Landing Page de Conversión",
+                "desc": "Una página diseñada con un único objetivo: convertir visitantes en clientes o leads. Ideal para campañas publicitarias, lanzamientos de producto o captación de prospectos calificados.",
+                "price_usd": "450",
+                "price_gtq": "3,500",
+                "price_usd_premium": "540",
+                "price_gtq_premium": "4,150",
+                "popular": true,
+                "includes": [
+                    "Dominio y hosting incluido (1er año)",
+                    "Arquitectura de conversión estratégica",
+                    "Copywriting persuasivo incluido",
+                    "Integración con email marketing",
+                    "A/B testing listo para optimizar",
+                    "Entrega en 2-3 semanas"
+                ],
+                "includes_premium": [
+                    "Dominio y hosting profesional incluido (1er año)",
+                    "Arquitectura de conversión de alto rendimiento",
+                    "Copywriting avanzado (Neuroventas)",
+                    "Automatización completa de embudo",
+                    "Seguimiento avanzado de conversiones",
+                    "Soporte prioritario post-lanzamiento"
+                ]
+            },
+            "ecommerce": {
+                "name": "Ecommerce Profesional",
+                "desc": "Tu tienda online construida para vender. Catálogo de productos, carrito de compras, pasarelas de pago y una experiencia de compra que genera confianza y fideliza clientes.",
+                "price_usd": "700",
+                "price_gtq": "5,400",
+                "price_usd_premium": "840",
+                "price_gtq_premium": "6,500",
+                "includes": [
+                    "Dominio y hosting incluido (1er año)",
+                    "Catálogo de productos administrable",
+                    "Pasarelas de pago configuradas",
+                    "Gestión de inventario básica",
+                    "Diseño enfocado en experiencia de compra",
+                    "Entrega en 4-6 semanas"
+                ],
+                "includes_premium": [
+                    "Dominio y hosting escalable incluido (1er año)",
+                    "Experiencia de compra hiper-optimizada",
+                    "Recuperación de carritos abandonados",
+                    "Integración con ERP o facturación",
+                    "Capacitación de equipo (2hrs)",
+                    "Garantía de rendimiento"
+                ]
+            },
+            "systems": {
+                "name": "Sistema Web a Medida",
+                "desc": "Plataformas internas, dashboards, CRMs o herramientas de gestión diseñadas específicamente para tu operación. Automatiza procesos y toma el control de tu información.",
+                "price_usd": "950",
+                "price_gtq": "7,300",
+                "price_usd_premium": "1,140",
+                "price_gtq_premium": "8,800",
+                "includes": [
+                    "Dominio y hosting incluido (1er año)",
+                    "Análisis de requerimientos completo",
+                    "Arquitectura escalable",
+                    "Panel de administración personalizado",
+                    "Reportes y métricas integradas",
+                    "Entrega según alcance definido"
+                ],
+                "includes_premium": [
+                    "Infraestructura Cloud dedicada (1er año)",
+                    "Análisis y consultoría de procesos",
+                    "Desarrollo de API y Webhooks",
+                    "Roles y permisos granulares",
+                    "Seguridad y encriptación nivel bancario",
+                    "Acuerdo de Nivel de Servicio (SLA)"
+                ]
+            }
         }
     },
     "footer": {
+        "tagline": "Soluciones digitales que generan resultados.",
         "subscribe_title": "Suscríbete a nuestras noticias",
         "email_placeholder": "Correo electrónico",
         "company": "Compañía",
         "support": "Soporte",
         "social": "Social",
-        "rights": "© 2025 KPixel Craft. Todos los derechos reservados.",
+        "rights": "© 2026 KPixel Craft. Todos los derechos reservados.",
         "links": {
             "about": "Nosotros",
-            "careers": "Carreras",
-            "ventures": "Ventures",
-            "grants": "Grants",
+            "services": "Servicios",
+            "process": "Proceso",
             "help": "Centro de Ayuda",
             "terms": "Términos de Servicio",
             "privacy": "Política de Privacidad"
         }
+    },
+    "faq": {
+        "title": "Preguntas Frecuentes",
+        "subtitle": "Todo lo que necesitas saber antes de iniciar",
+        "items": [
+            {
+                "q": "¿Qué pasa después de solicitar una cotización?",
+                "a": "Agendamos una breve llamada de descubrimiento (15-20 min) para entender tus objetivos, necesidades y confirmar si somos el equipo indicado para tu proyecto. Luego, elaboramos una propuesta estratégica detallada."
+            },
+            {
+                "q": "¿Trabajan con plantillas compradas?",
+                "a": "No. Cada proyecto comienza desde una pantalla en blanco y se diseña específicamente para los objetivos de conversión de tu negocio, asegurando una presencia digital rápida, única y optimizada."
+            },
+            {
+                "q": "¿Quién es el dueño del código fuente y dominio al terminar?",
+                "a": "Tú eres el único dueño al 100%. Todo queda registrado a nombre de tu empresa (dominio, hosting, código libre) y entregamos todos los accesos administrativos al concluir el desarrollo."
+            },
+            {
+                "q": "¿Cuáles son las formas de pago?",
+                "a": "Trabajamos con un esquema estándar de 50% al inicio para separar el espacio en nuestra línea de desarrollo y arrancar la fase estratégica, y 50% al momento del lanzamiento. Aceptamos transferencias y tarjetas (aplica recargo)."
+            },
+            {
+                "q": "¿Ofrecen soporte técnico después del lanzamiento?",
+                "a": "Sí, nuestros proyectos Premium incluyen un mes de soporte prioritario gratuito post-lanzamiento. Para mantenimiento continuo, ofrecemos pólizas mensuales adaptadas a tu nivel de operación."
+            }
+        ]
     }
 }

@@ -1,7 +1,10 @@
 import { Mail, Phone, MapPin, Github, Linkedin, Instagram, Send } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="contacto" className="py-32 relative overflow-hidden">
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px]" />
@@ -20,7 +23,7 @@ const Contact = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-lime"></span>
             </span>
-            Disponible para nuevos proyectos
+            {t("contact.badge")}
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -28,8 +31,8 @@ const Contact = () => {
             viewport={{ once: true }}
             className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6"
           >
-            Hablemos de{" "}
-            <span className="text-gradient font-serif italic font-normal">tu idea</span>
+            {t("contact.title")}{" "}
+            <span className="text-gradient font-serif italic font-normal">{t("contact.title_highlight")}</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -37,7 +40,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="text-lg text-muted-foreground"
           >
-            Ya sea un MVP rápido o una transformación digital completa, estamos listos para escuchar.
+            {t("contact.description")}
           </motion.p>
         </div>
 
@@ -53,23 +56,23 @@ const Contact = () => {
               {[
                 {
                   icon: Phone,
-                  label: "Llámanos",
+                  label: t("contact.info.phone_label"),
                   value: "+502 5793-7229",
                   href: "tel:+50257937229",
-                  detail: "Lunes a Viernes, 9am - 6pm",
+                  detail: t("contact.info.phone_detail"),
                 },
                 {
                   icon: Mail,
-                  label: "Escríbenos",
+                  label: t("contact.info.email_label"),
                   value: "krispaz77@gmail.com",
                   href: "mailto:krispaz77@gmail.com",
-                  detail: "Respondemos en menos de 24h",
+                  detail: t("contact.info.email_detail"),
                 },
                 {
                   icon: MapPin,
-                  label: "Oficina",
+                  label: t("contact.info.location_label"),
                   value: "Guatemala, GT",
-                  detail: "Disponible remoto globalmente",
+                  detail: t("contact.info.location_detail"),
                 },
               ].map((item, i) => (
                 <div key={i}>
@@ -126,35 +129,43 @@ const Contact = () => {
               <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Nombre</label>
+                    <label className="block text-sm font-medium text-foreground mb-2">
+                      {t("contact.form.name")}
+                    </label>
                     <input
                       type="text"
-                      placeholder="Tu nombre"
+                      placeholder={t("contact.form.name_placeholder")}
                       className="w-full px-4 py-3 bg-background/50 border border-white/[0.08] rounded-xl text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-all"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Email</label>
+                    <label className="block text-sm font-medium text-foreground mb-2">
+                      {t("contact.form.email")}
+                    </label>
                     <input
                       type="email"
-                      placeholder="tu@email.com"
+                      placeholder={t("contact.form.email_placeholder")}
                       className="w-full px-4 py-3 bg-background/50 border border-white/[0.08] rounded-xl text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-all"
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Asunto</label>
+                  <label className="block text-sm font-medium text-foreground mb-2">
+                    {t("contact.form.subject")}
+                  </label>
                   <input
                     type="text"
-                    placeholder="¿En qué te podemos ayudar?"
+                    placeholder={t("contact.form.subject_placeholder")}
                     className="w-full px-4 py-3 bg-background/50 border border-white/[0.08] rounded-xl text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-all"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Mensaje</label>
+                  <label className="block text-sm font-medium text-foreground mb-2">
+                    {t("contact.form.message")}
+                  </label>
                   <textarea
                     rows={5}
-                    placeholder="Cuéntanos sobre tu proyecto..."
+                    placeholder={t("contact.form.message_placeholder")}
                     className="w-full px-4 py-3 bg-background/50 border border-white/[0.08] rounded-xl text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-all resize-none"
                   />
                 </div>
@@ -162,7 +173,7 @@ const Contact = () => {
                   type="submit"
                   className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-accent text-white font-bold rounded-full hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-accent/40 hover:scale-[1.01]"
                 >
-                  Enviar Mensaje
+                  {t("contact.form.submit")}
                   <Send className="w-4 h-4" />
                 </button>
               </form>
